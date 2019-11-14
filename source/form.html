@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sedona_form</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="main-nav">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="https://htmlacademy.ru/">HTML ACADEMY</a>
+          </li>
+        </ul>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </div>
+    </nav>
+    <a class="page-header__logo" href=""><img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
+        width="102" height="83" alt="Логотип Sedona"></a>
+    <img src="img/sedona.svg" alt="">
+  </header>
+  <main class="page-main">
+    <section class="about about--comment">
+      <h1 class="about__title">Оставьте свой отзыв</h1>
+      <p class="about__text">Помогите нашим отелям сать лучше! Оставьте отзыв о них, а также о посещенных вами
+        достопримечательностях</p>
+    </section>
+    <section class="form">
+      <h2 class="visually-hidden">Заполните форму</h2>
+      <div class="form__wrapper">
+        <form class="form__fillform" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="fildset fieldset--user-name">
+            <legend class="fildset__legend">Представтесь:</legend>
+            <label class="fildset__label" for="name">Имя*:</label>
+            <input class="fildset__input" type="text" name="name" id="name" placeholder="Петр" required>
+            <label class="fildset__label" for="surname">Фамилия*:</label>
+            <input class="fildset__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
+            <label class="fildset__label" for="patronymic">Отчество*:</label>
+            <input class="fildset__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович"
+              required>
+          </fieldset>
+          <fieldset class="fildset fieldset--contacts">
+            <legend class="fildset__legend">Контактная информация:</legend>
+            <label class="fildset__label" for="tel">Контактный телефон*:</label>
+            <input class="fildset__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+            <label class="fildset__label" for="e-mail">Введите e-mail*:</label>
+            <input class="fildset__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
+          </fieldset>
+          <fieldset class="fildset fieldset--impression">
+            <legend class="fildset__legend">Ваше общее впечатление:</legend>
+            <input class="fildset__radio" type="radio" name="radio_1" id="radio_1" checked>
+            <label class="fildset__label" for="radio_1">Скорее положительное</label>
+            <input class="fildset__radio" type="radio" name="radio_2" id="radio_2">
+            <label class="fildset__label" for="radio_2">Скорее отрицательное</label>
+            <input class="fildset__radio" type="radio" name="radio_3" id="radio_3">
+            <label class="fildset__label" for="radio_3">Затрудняюсь ответить</label>
+          </fieldset>
+          <fieldset class="fildset fieldset--attractions">
+            <legend class="fildset__legend">Посещенные достопримечательности:</legend>
+            <input class="fildset__checkbox" type="checkbox" name="checkbox_1" id="checkbox_1" checked>
+            <label class="fildset__label" for="checkbox_1">Мост Дьявола</label>
+            <input class="fildset__checkbox" type="checkbox" name="checkbox_2" id="checkbox_2" checked>
+            <label class="fildset__label" for="checkbox_2">Гора-Колокол</label>
+            <input class="fildset__checkbox" type="checkbox" name="checkbox_3" id="checkbox_3" checked>
+            <label class="fildset__label" for="checkbox_3">Слайд-парк</label>
+            <input class="fildset__checkbox" type="checkbox" name="checkbox_4" id="checkbox_4">
+            <label class="fildset__label" for="checkbox_4">Красные скалы</label>
+          </fieldset>
+          <fieldset class="fildset fieldset--emotions">
+            <legend class="fildset__legend">Опишите свои эмоции:</legend>
+            <textarea class="fildset__textarea" name="emotions" id="emotions" cols="30" rows="10"
+              placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <button class="form-button button" type="submit">Отправить отзыв</button>
+        </form>
+      </div>
+    </section>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__contacts contacts">
+          <b>#VISITSEDONA</b>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img
+              src="img/htmlacademy-svg.png" alt="логотип HTML ACADEMY"></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
