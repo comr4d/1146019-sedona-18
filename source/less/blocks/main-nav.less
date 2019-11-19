@@ -3,21 +3,22 @@
   height: 220px;
   background-color: #81b3d2;
   margin-bottom: 20px;
-  &__wrapper {
 
-}
-&__list {
+  &__toggle {
+    display: block;
+  }
 
-}
-&__toggle {
-  display: block;
-}
-&__text {
-background: url(../img/back-mobile-jpg.png);
-background-color: @light-grey-blue;
-width: 320px;
-height: 389px;
-object-fit: contain;
-background-position: -210px;
-}
+  &__text {
+    background: url("../img/back-mobile-jpg.png");
+    background-color: @light-grey-blue;
+    width: 320px;
+    height: 389px;
+    object-fit: contain;
+    background-position: -210px;
+
+    &--photo {
+      height: 200px;
+    }
+  }
+
 }

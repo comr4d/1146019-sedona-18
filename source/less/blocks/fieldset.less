@@ -1,41 +1,54 @@
 .fieldset {
   border: none;
-	&__legend {
+
+  &__legend {
     font-weight: bold;
     font-size: 18px;
-	}
-	&__label {
+  }
+
+  &__label {
     width: 36px;
     height: 11px;
-    font-size: px;
+    font-size: 14px;
     line-height: 1.86;
     color: @black;
-	}
-	&__input {
-  width: 69px;
-  height: 13px;
-  font-family: PTSans;
-  font-size: 18px;
-  font-weight: bold;
+  }
 
-  line-height: 1.44;
+  &__input {
+    box-sizing: border-box;
+    min-width: 192px;
+    height: 58px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    color: @black-two;
+    background-color: @light-grey;
+    padding: 25px;
+    margin-bottom: 10px;
+    border: none;
+    &--name{
+      width: 230px
+    }
 
-  color: @black-two;
-	}
-	&__radio {
-	}
-	&__checkbox {
-	}
-	&__textarea {
-	}
-	&--user-name {
-	}
-	&--contacts {
-	}
-	&--impression {
-	}
-	&--attractions {
-	}
-	&--emotions {
-	}
+    &--surname{
+      width: 192px
+    }
+
+    &--patronymic{
+      width: 194px
+    }
+  }
+  &__textarea {
+    box-sizing: border-box;
+    width: 279px;
+    height: 160px;
+    font-family: PTSans;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    color: @black-two;
+    background-color: @light-grey;
+    padding: 22px 30px 95px 21px;
+    border: none;
+  }
 }

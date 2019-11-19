@@ -16,16 +16,16 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">Главная</a>
+            <a class="link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="photo.html">Фото и видео</a>
+            <a class="link" href="photo.html">Фото и видео</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Форма отзыва</a>
+            <a class="link" href="form.html">Форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a href="https://htmlacademy.ru/">HTML ACADEMY</a>
+            <a class="link" href="https://htmlacademy.ru/">Html academy</a>
           </li>
         </ul>
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -33,7 +33,7 @@
     </nav>
     <a class="page-header__logo" href=""><img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
         width="102" height="83" alt="Логотип Sedona"></a>
-    <img src="img/sedona.svg" alt="">
+    <img class="main-nav__text main-nav__text--photo" src="img/sedona.svg" alt="">
   </header>
   <main class="page-main">
     <section class="about about--photo">
@@ -54,7 +54,7 @@
           <li class="gallery-item">
             <a class="gallery-item__image" href="#"><img src="img/photo-2-mobile-jpg.png" alt=""></a>
             <h3 class="gallery-item__title">Местная растительность</h3>
-            <p class="gallery-item">Автор фото: Сергей</p>
+            <p class="gallery-item__author">Автор фото: Сергей</p>
             <span class="gallery-item__likes">143</span>
           </li>
           <li class="gallery-item">
@@ -83,24 +83,25 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
-          <b>#VISITSEDONA</b>
+          <b class="contacts__text">#VISITSEDONA</b>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte link" href="#">
+              <img src="img/icon-twitter.svg" width="18" height="14" alt="Иконка Твиттер" aria-label="Мы в Твиттер"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook link" href="#"><img src="img/icon-facebook.svg" width="9" height="18" alt="Иконка Фейсбук" aria-label="Мы в Фейсбуке"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram link" href="#"><img src="img/icon-youtube.svg" width="20" height="14" alt="Иконка Ютуб" aria-label="Мы в Ютуб"></a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img
+          <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><img
               src="img/htmlacademy-svg.png" alt="логотип HTML ACADEMY"></a>
         </div>
       </div>
