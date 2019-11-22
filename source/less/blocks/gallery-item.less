@@ -1,0 +1,45 @@
+.gallery-item {
+  margin-bottom: 40px;
+  padding: 20px;
+  position: relative;
+}
+
+.gallery-item__image {
+}
+.gallery-item__title {
+  min-width: 179px;
+  height: 37px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.71;
+  color: @black-two;
+  text-align: left;
+}
+.gallery-item__author {
+  text-transform: capitalize;
+  font-weight: normal;
+  color: @black;
+  margin-right: 10px;
+  text-align: left;
+}
+.gallery-item__likes {
+  display: block;
+  width: 23px;
+  height: 11px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.71;
+  color: @black-two;
+  text-align: left;
+  margin-left: 20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 20px;
+    background: url(/source/img/icon-like.svg);
+    opacity: 0.3;
+    left: 20px;
+  }
+}

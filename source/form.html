@@ -6,33 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
   <title>Sedona_form</title>
 </head>
 
-<body class="body">
+<body class="page">
   <header class="page-header">
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="https://htmlacademy.ru/">HTML ACADEMY</a>
-          </li>
-        </ul>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-      </div>
-    </nav>
-    <a class="page-header__logo" href=""><img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
-        width="102" height="83" alt="Логотип Sedona"></a>
-    <img src="img/sedona.svg" alt="">
+    <div class="page-header__wrapper">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="site-list__item  site-list__item--active">
+              <a class="link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a class="link" href="https://htmlacademy.ru/">Html academy</a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+        </div>
+      </nav>
+      <a class="page-header__logo" href=""><img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
+          width="102" height="83" alt="Логотип Sedona"></a>
+      <img class="main-nav__text main-nav__text--photo" src="img/sedona.svg" alt="">
+    </div>
   </header>
   <main class="page-main">
     <section class="about about--comment">
@@ -44,46 +47,46 @@
       <h2 class="visually-hidden">Заполните форму</h2>
       <div class="form__wrapper">
         <form class="form__fillform" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="fildset fieldset--user-name">
-            <legend class="fildset__legend">Представтесь:</legend>
-            <label class="fildset__label" for="name">Имя*:</label>
-            <input class="fildset__input" type="text" name="name" id="name" placeholder="Петр" required>
-            <label class="fildset__label" for="surname">Фамилия*:</label>
-            <input class="fildset__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
-            <label class="fildset__label" for="patronymic">Отчество*:</label>
-            <input class="fildset__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович"
+          <fieldset class="fieldset fieldset--user-name">
+            <legend class="fieldset__legend">Представтесь:</legend>
+            <label class="fieldset__label" for="name">Имя*:</label>
+            <input class="fieldset__input fieldset__input--name" type="text" name="name" id="name" placeholder="Петр" required>
+            <label class="fieldset__label" for="surname">Фамилия*:</label>
+            <input class="fieldset__input fieldset__input--surname" type="text" name="surname" id="surname" placeholder="Иванов" required>
+            <label class="fieldset__label" for="patronymic">Отчество*:</label>
+            <input class="fieldset__input fieldset__input--patronymic" type="text" name="patronymic" id="patronymic" placeholder="Александрович"
               required>
           </fieldset>
-          <fieldset class="fildset fieldset--contacts">
-            <legend class="fildset__legend">Контактная информация:</legend>
-            <label class="fildset__label" for="tel">Контактный телефон*:</label>
-            <input class="fildset__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
-            <label class="fildset__label" for="e-mail">Введите e-mail*:</label>
-            <input class="fildset__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
+          <fieldset class="fieldset fieldset--contacts">
+            <legend class="fieldset__legend">Контактная информация:</legend>
+            <label class="fieldset__label" for="tel">Контактный телефон*:</label>
+            <input class="fieldset__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+            <label class="fieldset__label" for="e-mail">Введите e-mail*:</label>
+            <input class="fieldset__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
           </fieldset>
-          <fieldset class="fildset fieldset--impression">
-            <legend class="fildset__legend">Ваше общее впечатление:</legend>
-            <input class="fildset__radio" type="radio" name="radio_1" id="radio_1" checked>
-            <label class="fildset__label" for="radio_1">Скорее положительное</label>
-            <input class="fildset__radio" type="radio" name="radio_2" id="radio_2">
-            <label class="fildset__label" for="radio_2">Скорее отрицательное</label>
-            <input class="fildset__radio" type="radio" name="radio_3" id="radio_3">
-            <label class="fildset__label" for="radio_3">Затрудняюсь ответить</label>
+          <fieldset class="fieldset fieldset--impression">
+            <legend class="fieldset__legend">Ваше общее впечатление:</legend>
+            <input class="fieldset__radio" type="radio" name="radio_1" id="radio_1" checked>
+            <label class="fieldset__label" for="radio">Скорее положительное</label>
+            <input class="fieldset__radio" type="radio" name="radio_2" id="radio_2">
+            <label class="fieldset__label" for="radio">Скорее отрицательное</label>
+            <input class="fieldset__radio" type="radio" name="radio_3" id="radio_3">
+            <label class="fieldset__label" for="radio">Затрудняюсь ответить</label>
           </fieldset>
-          <fieldset class="fildset fieldset--attractions">
-            <legend class="fildset__legend">Посещенные достопримечательности:</legend>
-            <input class="fildset__checkbox" type="checkbox" name="checkbox_1" id="checkbox_1" checked>
-            <label class="fildset__label" for="checkbox_1">Мост Дьявола</label>
-            <input class="fildset__checkbox" type="checkbox" name="checkbox_2" id="checkbox_2" checked>
-            <label class="fildset__label" for="checkbox_2">Гора-Колокол</label>
-            <input class="fildset__checkbox" type="checkbox" name="checkbox_3" id="checkbox_3" checked>
-            <label class="fildset__label" for="checkbox_3">Слайд-парк</label>
-            <input class="fildset__checkbox" type="checkbox" name="checkbox_4" id="checkbox_4">
-            <label class="fildset__label" for="checkbox_4">Красные скалы</label>
+          <fieldset class="fieldset fieldset--attractions">
+            <legend class="fieldset__legend">Посещенные достопримечательности:</legend>
+            <input class="fieldset__checkbox" type="checkbox" name="checkbox_1" id="checkbox_1" checked>
+            <label class="fieldset__label" for="checkbox_1">Мост Дьявола</label>
+            <input class="fieldset__checkbox" type="checkbox" name="checkbox_2" id="checkbox_2" checked>
+            <label class="fieldset__label" for="checkbox_2">Гора-Колокол</label>
+            <input class="fieldset__checkbox" type="checkbox" name="checkbox_3" id="checkbox_3" checked>
+            <label class="fieldset__label" for="checkbox_3">Слайд-парк</label>
+            <input class="fieldset__checkbox" type="checkbox" name="checkbox_4" id="checkbox_4">
+            <label class="fieldset__label" for="checkbox_4">Красные скалы</label>
           </fieldset>
-          <fieldset class="fildset fieldset--emotions">
-            <legend class="fildset__legend">Опишите свои эмоции:</legend>
-            <textarea class="fildset__textarea" name="emotions" id="emotions" cols="30" rows="10"
+          <fieldset class="fieldset fieldset--emotions">
+            <legend class="fieldset__legend">Опишите свои эмоции:</legend>
+            <textarea class="fieldset__textarea" name="emotions" id="emotions" cols="30" rows="10"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
           <button class="form-button button" type="submit">Отправить отзыв</button>
@@ -93,24 +96,25 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__contacts contacts">
-          <b>#VISITSEDONA</b>
+          <b class="contacts__text">#VISITSEDONA</b>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte link" href="#">
+              <img src="img/icon-twitter.svg" width="18" height="14" alt="Иконка Твиттер" aria-label="Мы в Твиттер"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook link" href="#"><img src="img/icon-facebook.svg" width="9" height="18" alt="Иконка Фейсбук" aria-label="Мы в Фейсбуке"></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram link" href="#"><img src="img/icon-youtube.svg" width="20" height="14" alt="Иконка Ютуб" aria-label="Мы в Ютуб"></a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img
+          <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><img
               src="img/htmlacademy-svg.png" alt="логотип HTML ACADEMY"></a>
         </div>
       </div>
