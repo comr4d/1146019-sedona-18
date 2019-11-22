@@ -3,27 +3,59 @@
 }
 
 .offer__list {
-  width: 230px;
+  width: 320px;
   font-size: 14px;
   line-height: 1.5;
   text-align: left;
   color: @black;
   list-style: none;
-  padding: 0;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.offer__item {
+  box-sizing: border-box;
+}
+
+.offer__image {
+    display: inline-block;
+    fill: @light-grey-blue;
+    margin-top: 10px;
+  &--housing {
+    width: 37px;
+    height: 36px;
+  }
+  &--souvenirs {
+    width: 32px;
+    height: 38px;
+  }
+  &--food {
+    width: 40px;
+    height: 35px;
+  }
 }
 
 .offer__title {
+  display: inline-block;
+  vertical-align: top;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
   color: @black-three;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 0px;
 }
 
 .offer__description {
+  display: inline-block;
+  width: 210px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.5;
   color: @black;
+  margin-left: 49px;
+  margin-top: 0px;
 }
 
 .offer__description {
