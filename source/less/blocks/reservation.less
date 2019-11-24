@@ -20,6 +20,8 @@
 }
 
 .reservation__description {
+  margin: 0 auto;
+  width: 270px;
   margin-bottom: 40px;
 }
 
@@ -34,4 +36,43 @@
 
 .reservation__map {
   margin-top: 49px;
+}
+
+@media (min-width: @tablet-width) {
+  .reservation {
+    width: @tablet-width;
+    font-size: 14px;
+    line-height: 1.71;
+    color: @black;
+    margin: auto;
+    margin-top: 57px;
+  }
+  .reservation__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 0.87;
+    color: @black-two;
+    margin-bottom: 20px;
+  }
+
+
+  .reservation__description {
+    width: 454px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .reservation__button {
+    width: 458px;
+    height: 58px;
+    font-size: 21px;
+    line-height: 1.24;
+    padding: 15px;
+    margin-bottom: 49px;
+  }
+
+  .reservation__map {
+    width: 768px;
+    height: 350px;
+  }
 }

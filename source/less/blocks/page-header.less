@@ -10,13 +10,22 @@
 
 .page-header__logo {
   position: absolute;
-  height: 85px;
+  top: 260px;
   left: 110px;
   z-index: 1;
 }
 
 @media (min-width: @tablet-width) {
+  .page-header {
+    width: @tablet-width;
+    position: relative;
+  }
+
+
   .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 338px;
     order: 2;
     height: 102px;
 }
