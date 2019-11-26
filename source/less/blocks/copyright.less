@@ -3,7 +3,7 @@
 
 .copyright__text {
   width: 91px;
-  height: 11px;
+
   font-size: 14px;
   line-height: 1.86;
   color: @black-three;
@@ -31,7 +31,24 @@
 
 @media (min-width: @tablet-width) {
   .copyright {
-    height: 43px;
+    width: 150px;
+    height: 35px;
+    margin-top: 5px;
+  }
+  .copyright__text {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 10px;
+    margin-top: 4px;
+    width: 91px;
+    font-weight: normal;
+    font-size: 14px;
+    font-style: normal;
+    color: @black-two;
+  }
+  .copyright__logo {
+    display: inline-block;
+    vertical-align: baseline;
   }
 
 }

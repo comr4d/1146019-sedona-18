@@ -43,10 +43,9 @@
           </nav>
           <a class="page-header__logo" href=""><img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
               width="102" height="83" alt="Логотип Sedona"></a>
-          <div class="main-nav__img-wrapper main-nav__img-wrapper--photo">
-              <img class="main-nav__text main-nav__text--photo" src="img/sedona.svg" alt="">
-            <img class="main-nav__triangle main-nav__triangle--photo" src="img/bg-intro-triangle-mobile.svg" alt="">
-          </div>
+              <div class="main-nav__img-wrapper main-nav__img-wrapper--photo">
+                <img class="main-nav__text main-nav__text--photo" src="img/sedona.svg" alt="">
+            </div>
         </div>
       </header>
   <main class="page-main">
@@ -70,11 +69,11 @@
               required>
           </fieldset>
           <fieldset class="fieldset fieldset--contacts">
-            <legend class="fieldset__legend">Контактная информация:</legend>
-            <label class="fieldset__label" for="tel">Контактный телефон*:</label>
-            <input class="fieldset__input" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
-            <label class="fieldset__label" for="e-mail">Введите e-mail*:</label>
-            <input class="fieldset__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
+            <legend class="fieldset__legend fieldset__legend--contacts">Контактная информация:</legend>
+            <label class="fieldset__label fieldset__label--contacts" for="tel">Контактный телефон*:</label>
+            <input class="fieldset__input fieldset__input--contacts" type="tel" name="tel" id="tel" placeholder="Введите телефон" required>
+            <label class="fieldset__label fieldset__label--contacts" for="e-mail">Введите e-mail*:</label>
+            <input class="fieldset__input fieldset__input--contacts" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
           </fieldset>
           <fieldset class="fieldset fieldset--impression">
             <legend class="fieldset__legend fieldset__legend--radio ">Ваше общее впечатление:</legend>
@@ -86,7 +85,7 @@
             <label class="fieldset__label fieldset__label--radio" for="radio">Затрудняюсь ответить</label>
           </fieldset>
           <fieldset class="fieldset fieldset--attractions">
-            <legend class="fieldset__legend">Посещенные достопримечательности:</legend>
+            <legend class="fieldset__legend fieldset__legend--attractions">Посещенные достопримечательности:</legend>
             <input class="fieldset__checkbox" type="checkbox" name="checkbox_1" id="checkbox_1" checked>
             <label class="fieldset__label" for="checkbox_1">Мост Дьявола</label>
             <input class="fieldset__checkbox" type="checkbox" name="checkbox_2" id="checkbox_2" checked>

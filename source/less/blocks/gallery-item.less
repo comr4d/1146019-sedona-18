@@ -5,10 +5,13 @@
 }
 
 .gallery-item__image {
+  display: block;
+  width: 280px;
+  height: 280px;
+  background-image: url(../img/photo-1-mobile-jpg.png);
 }
 .gallery-item__title {
   min-width: 179px;
-  height: 37px;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.71;
@@ -31,15 +34,117 @@
   line-height: 1.71;
   color: @black-two;
   text-align: left;
-  margin-left: 20px;
-
   &:before {
     content: "";
     position: absolute;
     width: 22px;
     height: 20px;
-    background: url(/source/img/icon-like.svg);
+    background: url(../img/icon-like.svg);
     opacity: 0.3;
     left: 20px;
   }
 }
+
+@media (min-width: @tablet-width) {
+
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 68px;
+  }
+  .gallery-item {
+    width: 324px;
+    height: 347px;
+    box-sizing: border-box;
+    padding: 0;
+    position: relative;
+    background-color: @light-grey;
+    margin-bottom: 0px;
+    &--photo-1 {
+      width: 648px;
+      height: 480px;
+      margin: 0 auto;
+
+    }
+    &--photo-2 {
+
+      margin-left: 60px;
+
+
+    }
+    &--photo-3 {
+      margin-right: 60px;
+      background-color: @dark-grey;
+    }
+    &--photo-4 {
+      margin-left: 60px;
+      margin-right: auto;
+      background-color: @dark-grey;
+    }
+  }
+
+  .gallery-item__image {
+    display: block;
+    width: 324px;
+    height: 267px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    &--photo-1 {
+      width: 648px;
+      height: 400px;
+      background-image: url(../img/photo-sunset-tablet@1x.jpg);
+    }
+    &--photo-2 {
+      background-image: url(../img/photo-cactus-tablet@1x.jpg);
+
+    }
+    &--photo-3 {
+      background-image: url(../img/photo-roads-tablet@1x.jpg);
+    }
+    &--photo-4 {
+      background-image: url(../img/photo-bridge-tablet@1x.jpg);
+    }
+  }
+  .gallery-item__text {
+    display: block;
+    width: 179px;
+    margin-left: 20px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    text-transform: capitalize;
+    margin-right: 0px;
+    margin-left: 20px;
+    margin-bottom: 27px;
+  }
+  .gallery-item__title {
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    min-width: 112px;
+  }
+
+  .gallery-item__likes {
+    position: absolute;
+    min-width: 15px;
+    display: block;
+    right: 20px;
+    bottom: 40px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 20px;
+      background: url(../img/icon-like.svg);
+      opacity: 0.3;
+      left: -30px;
+    }
+  }
+  }
+
+
+
+
+
+
