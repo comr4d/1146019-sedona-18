@@ -100,7 +100,9 @@
     margin: 0;
     margin-bottom: 75px;
     &--user-name {
+      box-sizing: border-box;
       order: 1;
+      padding-left: 40px;
     }
     &--contacts {
       width: 100%;
@@ -109,6 +111,9 @@
     &--impression {
       order: 0;
       border-right: 1px solid @grey;
+      box-sizing: border-box;
+      padding-right: 40px;
+
     }
     &--attractions {
       width: 100%;
@@ -116,7 +121,9 @@
     }
     &--emotions {
       width: 100%;
+
       order: 1;
+
     }
 
   }
@@ -177,8 +184,30 @@
           }
 
       }
+      &--emotions {
+        position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 120px;
+          height: 2px;
+          left:  345px;
+          top: 12px;
+          background-color: @grey;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 120px;
+          height: 2px;
+          right:  345px;
+            top: 12px;
+            background-color: @grey;
+          }
+      }
     }
-  }
+
 
   .fieldset__input {
     box-sizing: border-box;
@@ -193,8 +222,7 @@
     margin-bottom: 10px;
     border: none;
     outline: none;
-    &--name{
-      width: 230px
+    &--name {
     }
 
     &--surname{
@@ -211,6 +239,11 @@
   }
 
   .fieldset__label {
+
+    &--name {
+
+    }
+
 
     &--contacts {
     display: block;
@@ -230,5 +263,11 @@
     color: @black-two;
     text-transform: capitalize;
     }
+
+
   }
 
+  .fieldset__textarea {
+    width: 100%;
+  }
+}

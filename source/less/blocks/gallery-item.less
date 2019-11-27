@@ -1,30 +1,53 @@
 .gallery-item {
   margin-bottom: 40px;
   padding: 20px;
+  padding-bottom: 40px;
   position: relative;
+  border-bottom: solid 1px @grey;
+  box-sizing: border-box;
 }
 
 .gallery-item__image {
   display: block;
   width: 280px;
   height: 280px;
-  background-image: url(../img/photo-1-mobile-jpg.png);
+  background-repeat: no-repeat;
+  &--photo-1 {
+
+    background-image: url(../img/photo-sunset-mobile@1x.jpg);
+  }
+  &--photo-2 {
+    background-image: url(../img/photo-cactus-mobile@1x.jpg);
+
+  }
+  &--photo-3 {
+    background-image: url(../img/photo-roads-mobile@1x.jpg);
+  }
+  &--photo-4 {
+    background-image: url(../img/photo-bridge-mobile@1x.jpg);
+  }
 }
+
+.gallery-item__text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.71;
+  text-align: left;
+  color: @black;
+  text-transform: capitalize;
+}
+
 .gallery-item__title {
+  display: block;
   min-width: 179px;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.71;
   color: @black-two;
   text-align: left;
+  text-transform: uppercase;
 }
-.gallery-item__author {
-  text-transform: capitalize;
-  font-weight: normal;
-  color: @black;
-  margin-right: 10px;
-  text-align: left;
-}
+
 .gallery-item__likes {
   display: block;
   width: 23px;
@@ -34,6 +57,7 @@
   line-height: 1.71;
   color: @black-two;
   text-align: left;
+  margin-left: 40px;
   &:before {
     content: "";
     position: absolute;
@@ -60,6 +84,7 @@
     position: relative;
     background-color: @light-grey;
     margin-bottom: 0px;
+
     &--photo-1 {
       width: 648px;
       height: 480px;

@@ -7,6 +7,27 @@
 
 @media (min-width: @tablet-width) {
   .form-button {
+    position: relative;
     order: 1;
+    width: 324px;
+    height: 58px;
+    margin-left: 0px;
+    &:after {
+      content: "* — обязательные поля";
+      position: absolute;
+      width: 200px;
+  height: 11px;
+
+  font-size: 14px;
+
+  line-height: 1.86;
+
+  text-align: right;
+  color: @black;
+        left:  440px;
+        top: 20px;
+
+      }
   }
+
 }
