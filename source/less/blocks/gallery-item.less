@@ -16,9 +16,7 @@
   @media (min-width: @tablet-width) {
     width: 324px;
     height: 347px;
-    box-sizing: border-box;
     padding: 0;
-    position: relative;
     background-color: @light-grey;
     margin-bottom: 0px;
     &--photo-1 {
@@ -59,10 +57,8 @@
     background-image: url(../img/photo-bridge-mobile@1x.jpg);
   }
   @media (min-width: @tablet-width) {
-    display: block;
     width: 324px;
     height: 267px;
-    background-repeat: no-repeat;
     margin: 0 auto;
     &--photo-1 {
       width: 648px;
@@ -92,9 +88,6 @@
     display: block;
     width: 179px;
     margin-left: 20px;
-    font-size: 14px;
-    line-height: 1.71;
-    text-align: left;
     text-transform: capitalize;
     margin-right: 0px;
     margin-left: 20px;
@@ -114,7 +107,6 @@
   @media (min-width: @tablet-width) {
     text-transform: uppercase;
     display: block;
-    font-weight: bold;
     min-width: 112px;
   }
 }
@@ -141,16 +133,9 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     min-width: 15px;
-    display: block;
     right: 20px;
     bottom: 40px;
     &:before {
-      content: "";
-      position: absolute;
-      width: 22px;
-      height: 20px;
-      background: url(../img/icon-like.svg);
-      opacity: 0.3;
       left: -30px;
     }
   }
