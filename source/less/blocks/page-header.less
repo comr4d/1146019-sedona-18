@@ -3,37 +3,112 @@
   display: flex;
   flex-direction: column;
   position: relative;
-}
-.page-header__wrapper {
-
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    position: relative;
+  }
 }
 
 .page-header__logo {
   position: absolute;
-  top: 260px;
+  top: 220px;
   left: 110px;
   z-index: 1;
-}
-
-@media (min-width: @tablet-width) {
-  .page-header {
-    width: @tablet-width;
-    position: relative;
-  }
-
-
-  .page-header__logo {
+  @media (min-width: @tablet-width) {
     position: absolute;
     top: 0;
-    left: 338px;
+    left: 330px;
     order: 2;
     height: 102px;
-}
-}
-
-@media (min-width: @desktop-width) {
-  .page-header__logo {
-    height: 648px;
   }
 }
+
+.page-header__img-wrapper {
+  width: 318px;
+  height: 389px;
+  margin-top: 60px;
+  background: url("../img/back-mobile-jpg.png");
+  background-position: -220px 0px;
+  background-repeat: no-repeat;
+  margin: 60px auto;
+  position: relative;
+  &--photo {
+    position: relative;
+    height: 158px;
+    margin-bottom: 45px;
+    background-position: -230px -220px;
+    background-repeat: no-repeat;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    background-image: url(../img/bg-intro-triangle-mobile.svg);
+    background-size: 100% 26px;
+    height: 26px;
+    bottom: 0px;
+  }
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    height: 518px;
+    background: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+    position: relative;
+
+    &--photo {
+      position: relative;
+      height: 300px;
+      margin-bottom: 45px;
+      background-position: 0px 0px;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      background-image: url(../img/bg-intro-triangle-tablet.svg);
+      background-size: 100% 57px;
+      height: 57px;
+      bottom: -1px;
+    }
+  }
+}
+
+.page-header__text {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  width: 281px;
+  height: 214px;
+  object-fit: contain;
+  &--photo {
+    position: absolute;
+    top: 52px;
+    left: 46px;
+    width: 229px;
+    height: 39px;
+  }
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 77px;
+    left: 154px;
+    width: 460px;
+    height: 350px;
+    object-fit: contain;
+    &--photo {
+      position: absolute;
+      bottom: 116px;
+      left: 152px;
+      width: 460px;
+      height: 80px;
+    }
+  }
+}
+
+
+
 

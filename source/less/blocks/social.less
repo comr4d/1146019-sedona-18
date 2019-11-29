@@ -1,12 +1,23 @@
 .social {
   margin-top: 41px;
   margin-bottom: 51px;
+  @media (min-width: @tablet-width) {
+    width: 150px;
+    display: block;
+    box-sizing: border-box;
+    height: 48px;
+    margin: 0 auto;
+  }
 }
 
 .social__list {
   display: flex;
   list-style: none;
   padding-left: 84px;
+  @media (min-width: @tablet-width) {
+    padding-left: 0px;
+    margin: 0px;
+  }
 }
 
 .social__item {
@@ -32,12 +43,10 @@
   &:active {
     fill: @white-30;
   }
-
   &--twitter {
     width: 18px;
     height: 14px;
     padding: 15px 15px;
-
   }
   &--facebook {
     width: 9px;
@@ -49,21 +58,5 @@
     height: 14px;
     padding: 16px 13px;
   }
-
 }
 
-@media (min-width: @tablet-width) {
-  .social {
-    width: 150px;
-    display: block;
-    box-sizing: border-box;
-    height: 48px;
-    margin: 0 auto;
-  }
-
-  .social__list {
-    padding-left: 0px;
-    margin: 0px;
-  }
-
-}

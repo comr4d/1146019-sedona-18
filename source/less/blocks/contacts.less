@@ -2,6 +2,9 @@
   width: 136px;
   height: 16px;
   color: @black-three;
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 }
 
 .contacts__text {
@@ -11,18 +14,7 @@
   color: @black-three;
   margin-left: 91px;
   margin-right: 93px;
-}
-
-.contacts__item {
-
-}
-
-@media (min-width: @tablet-width) {
-
-  .contacts {
-    margin-top: 10px;
-  }
-  .contacts__text {
+  @media (min-width: @tablet-width) {
     display: block;
     width: 136px;
     height: 16px;
@@ -32,7 +24,5 @@
     color: @black-three;
     margin-left: 0px;
     margin-right: 0px;
-
-
   }
 }

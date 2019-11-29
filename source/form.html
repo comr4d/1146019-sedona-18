@@ -17,16 +17,16 @@
             <div class="main-nav__wrapper">
               <ul class="main-nav__list site-list">
                 <li class="site-list__item">
-                  <a class="site-list__item--link" href="index.html">Главная</a>
+                  <a class="site-list__item site-list__item--link" href="index.html">Главная</a>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__item--link" href="photo.html">Фото и видео</a>
+                  <a class="site-list__item site-list__item--link" href="photo.html">Фото и видео</a>
                 </li>
                 <li class="site-list__item  site-list__item--active">
-                  <a class="site-list__item--link" href="form.html">Форма отзыва</a>
+                  <a class="site-list__item site-list__item--link" href="form.html">Форма отзыва</a>
                 </li>
                 <li class="site-list__item">
-                  <a class="site-list__item--link" href="https://htmlacademy.ru/">Html academy</a>
+                  <a class="site-list__item site-list__item--link" href="https://htmlacademy.ru/">Html academy</a>
                 </li>
               </ul>
               <button class="main-nav__toggle" type="button"><svg version="1.0" id="Layer_1"
@@ -43,9 +43,9 @@
           </nav>
           <a class="page-header__logo" href=""><img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
               width="102" height="83" alt="Логотип Sedona"></a>
-              <div class="main-nav__img-wrapper main-nav__img-wrapper--photo">
-                <img class="main-nav__text main-nav__text--photo" src="img/sedona.svg" alt="">
-            </div>
+              <div class="page-header__img-wrapper page-header__img-wrapper--photo">
+                <img class="page-header__text page-header__text--photo" src="img/sedona.svg" alt="">
+              </div>
         </div>
       </header>
   <main class="page-main">
@@ -77,12 +77,12 @@
           </fieldset>
           <fieldset class="fieldset fieldset--impression">
             <legend class="fieldset__legend fieldset__legend--radio ">Ваше общее впечатление:</legend>
-            <input class="fieldset__radio" type="radio" name="radio_1" id="radio_1" checked>
-            <label class="fieldset__label fieldset__label--radio" for="radio">Скорее положительное</label>
-            <input class="fieldset__radio" type="radio" name="radio_2" id="radio_2">
-            <label class="fieldset__label fieldset__label--radio" for="radio">Скорее отрицательное</label>
-            <input class="fieldset__radio" type="radio" name="radio_3" id="radio_3">
-            <label class="fieldset__label fieldset__label--radio" for="radio">Затрудняюсь ответить</label>
+            <input class="fieldset__radio" type="radio" name="radio" id="radio_1" checked>
+            <label class="fieldset__label fieldset__label--radio" for="radio_1">Скорее положительное</label>
+            <input class="fieldset__radio" type="radio" name="radio" id="radio_2">
+            <label class="fieldset__label fieldset__label--radio" for="radio_2">Скорее отрицательное</label>
+            <input class="fieldset__radio" type="radio" name="radio" id="radio_3">
+            <label class="fieldset__label fieldset__label--radio" for="radio_3">Затрудняюсь ответить</label>
           </fieldset>
           <fieldset class="fieldset fieldset--attractions">
             <legend class="fieldset__legend fieldset__legend--attractions">Посещенные достопримечательности:</legend>

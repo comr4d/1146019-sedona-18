@@ -4,39 +4,33 @@
   line-height: 1.44;
   color: @black;
   margin: auto;
-}
-
-.about__title {
-  font-size: 18px;
-  font-weight: bold;
-  color: @black-three;
-}
-
-.about__text {
-  font-size: 14px;
-}
-
-@media (min-width: @tablet-width) {
-  .about {
+  @media (min-width: @tablet-width) {
     width: 490px;
     height: 149px;
     line-height: 1.86;
     color: @black;
     margin-top: 51px;
   }
+}
 
-  .about__title {
+.about__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: @black-three;
+  @media (min-width: @tablet-width) {
     width: 100%;
     font-size: 21px;
     font-weight: bold;
     margin: 0 auto;
     color: @black-three;
   }
+}
 
-  .about__text {
+.about__text {
+  font-size: 14px;
+  @media (min-width: @tablet-width) {
     min-width: 428px;
     font-size: 14px;
     margin: 0 auto;
   }
 }
-

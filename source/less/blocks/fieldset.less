@@ -7,93 +7,7 @@
     margin: 0 auto;
     padding: 0;
   }
-}
-
-.fieldset__legend {
-  font-weight: bold;
-  font-size: 18px;
-  &--radio {
-    min-width: 235px;
-  }
-}
-
-.fieldset__label {
-  width: 36px;
-  height: 11px;
-  font-size: 14px;
-  line-height: 1.86;
-  color: @black;
-  &--radio {
-    margin-left: 30px;
-    margin-right: auto;
-
-  }
-}
-
-.fieldset__input {
-  box-sizing: border-box;
-  min-width: 192px;
-  height: 58px;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.44;
-  color: @black-two;
-  background-color: @light-grey;
-  padding: 25px;
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
-  &--name{
-    width: 230px
-  }
-
-  &--surname{
-    width: 192px
-  }
-
-  &--patronymic{
-    width: 194px
-  }
-
-  &:hover {
-    background-color: @grey;
-  }
-
-  &:active {
-    border: solid 4px @grey;
-    background-color: @white;
-  }
-}
-
-.fieldset__textarea {
-  box-sizing: border-box;
-  width: 279px;
-  height: 160px;
-  font-family: PTSans;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.44;
-  color: @black-two;
-  background-color: @light-grey;
-  padding: 22px 30px 95px 21px;
-  border: none;
-  outline: none;
-  &:hover {
-    background-color: @grey;
-  }
-
-  &:active {
-    border: solid 4px @grey;
-    background-color: @white;
-  }
-}
-
-.fieldset__radio {
-
-}
-
-@media (min-width: @tablet-width) {
-  .fieldset {
+  @media (min-width: @tablet-width) {
     display: block;
     width: 324px;
     padding: 0px;
@@ -113,7 +27,6 @@
       border-right: 1px solid @grey;
       box-sizing: border-box;
       padding-right: 40px;
-
     }
     &--attractions {
       width: 100%;
@@ -121,22 +34,24 @@
     }
     &--emotions {
       width: 100%;
-
       order: 1;
-
     }
-
   }
+}
 
-  .fieldset__legend {
+.fieldset__legend {
+  font-weight: bold;
+  font-size: 18px;
+  &--radio {
+    min-width: 235px;
+  }
+  @media (min-width: @tablet-width) {
     min-width: 163px;
     font-size: 21px;
     font-weight: bold;
     line-height: 1.24;
-
     color: @black-two;
     margin-bottom: 40px;
-
     &--radio {
       min-width: 235px;
     }
@@ -145,21 +60,21 @@
       &:after {
         content: "";
         position: absolute;
-          width: 120px;
-          height: 2px;
-          left:  360px;
-          top: 12px;
-          background-color: @grey;
+        width: 120px;
+        height: 2px;
+        left:  360px;
+        top: 12px;
+        background-color: @grey;
         }
         &:before {
-          content: "";
-          position: absolute;
-            width: 120px;
-            height: 2px;
-            right:  360px;
-            top: 12px;
-            background-color: @grey;
-          }
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        right:  360px;
+        top: 12px;
+        background-color: @grey;
+        }
       }
       &--attractions {
         position: relative;
@@ -168,83 +83,56 @@
         content: "";
         position: absolute;
         width: 120px;
-          height: 2px;
-          left:  360px;
-          top: 12px;
-          background-color: @grey;
+        height: 2px;
+        left:  360px;
+        top: 12px;
+        background-color: @grey;
         }
         &:before {
-          content: "";
-          position: absolute;
-          width: 120px;
-          height: 2px;
-          right:  360px;
-            top: 12px;
-            background-color: @grey;
-          }
-
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        right:  360px;
+        top: 12px;
+        background-color: @grey;
+        }
       }
       &--emotions {
         position: relative;
-
       &:after {
         content: "";
         position: absolute;
         width: 120px;
-          height: 2px;
-          left:  345px;
-          top: 12px;
-          background-color: @grey;
+        height: 2px;
+        left:  345px;
+        top: 12px;
+        background-color: @grey;
         }
         &:before {
-          content: "";
-          position: absolute;
-          width: 120px;
-          height: 2px;
-          right:  345px;
-            top: 12px;
-            background-color: @grey;
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        right:  345px;
+        top: 12px;
+        background-color: @grey;
           }
       }
-    }
-
-
-  .fieldset__input {
-    box-sizing: border-box;
-    min-width: 192px;
-    height: 58px;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.44;
-    color: @black-two;
-    background-color: @light-grey;
-    padding: 25px;
-    margin-bottom: 10px;
-    border: none;
-    outline: none;
-    &--name {
-    }
-
-    &--surname{
-      width: 192px
-    }
-
-    &--patronymic{
-      width: 194px
-    }
-
-    &--contacts {
-      width: 100%;
-    }
   }
+}
 
-  .fieldset__label {
-
-    &--name {
-
-    }
-
-
+.fieldset__label {
+  width: 36px;
+  height: 11px;
+  font-size: 14px;
+  line-height: 1.86;
+  color: @black;
+  &--radio {
+    margin-left: 30px;
+    margin-right: auto;
+  }
+  @media (min-width: @tablet-width) {
     &--contacts {
     display: block;
     width: 162px;
@@ -263,11 +151,89 @@
     color: @black-two;
     text-transform: capitalize;
     }
-
-
   }
+}
 
-  .fieldset__textarea {
+.fieldset__input {
+  box-sizing: border-box;
+  min-width: 192px;
+  height: 58px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: @black-two;
+  background-color: @light-grey;
+  padding: 25px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  &--name{
+    width: 230px
+  }
+  &--surname{
+    width: 192px
+  }
+  &--patronymic{
+    width: 194px
+  }
+  &:hover {
+    background-color: @grey;
+  }
+  &:active {
+    border: solid 4px @grey;
+    background-color: @white;
+  }
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    min-width: 192px;
+    height: 58px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    color: @black-two;
+    background-color: @light-grey;
+    padding: 25px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    &--surname{
+      width: 192px
+    }
+    &--patronymic{
+      width: 194px
+    }
+    &--contacts {
+      width: 100%;
+    }
+  }
+}
+
+.fieldset__textarea {
+  box-sizing: border-box;
+  width: 279px;
+  height: 160px;
+  font-family: PTSans;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: @black-two;
+  background-color: @light-grey;
+  padding: 22px 30px 95px 21px;
+  border: none;
+  outline: none;
+  &:hover {
+    background-color: @grey;
+  }
+  &:active {
+    border: solid 4px @grey;
+    background-color: @white;
+  }
+  @media (min-width: @tablet-width) {
     width: 100%;
+  }
+}
+
+.fieldset__radio {
+  @media (min-width: @tablet-width) {
   }
 }

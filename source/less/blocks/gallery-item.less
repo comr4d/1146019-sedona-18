@@ -1,3 +1,11 @@
+.gallery__list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 68px;
+  }
+}
+
 .gallery-item {
   margin-bottom: 40px;
   padding: 20px;
@@ -5,6 +13,32 @@
   position: relative;
   border-bottom: solid 1px @grey;
   box-sizing: border-box;
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    height: 347px;
+    box-sizing: border-box;
+    padding: 0;
+    position: relative;
+    background-color: @light-grey;
+    margin-bottom: 0px;
+    &--photo-1 {
+      width: 648px;
+      height: 480px;
+      margin: 0 auto;
+    }
+    &--photo-2 {
+      margin-left: 60px;
+    }
+    &--photo-3 {
+      margin-right: 60px;
+      background-color: @dark-grey;
+    }
+    &--photo-4 {
+      margin-left: 60px;
+      margin-right: auto;
+      background-color: @dark-grey;
+    }
+  }
 }
 
 .gallery-item__image {
@@ -13,18 +47,37 @@
   height: 280px;
   background-repeat: no-repeat;
   &--photo-1 {
-
     background-image: url(../img/photo-sunset-mobile@1x.jpg);
   }
   &--photo-2 {
     background-image: url(../img/photo-cactus-mobile@1x.jpg);
-
   }
   &--photo-3 {
     background-image: url(../img/photo-roads-mobile@1x.jpg);
   }
   &--photo-4 {
     background-image: url(../img/photo-bridge-mobile@1x.jpg);
+  }
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 324px;
+    height: 267px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    &--photo-1 {
+      width: 648px;
+      height: 400px;
+      background-image: url(../img/photo-sunset-tablet@1x.jpg);
+    }
+    &--photo-2 {
+      background-image: url(../img/photo-cactus-tablet@1x.jpg);
+    }
+    &--photo-3 {
+      background-image: url(../img/photo-roads-tablet@1x.jpg);
+    }
+    &--photo-4 {
+      background-image: url(../img/photo-bridge-tablet@1x.jpg);
+    }
   }
 }
 
@@ -35,6 +88,18 @@
   text-align: left;
   color: @black;
   text-transform: capitalize;
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 179px;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: left;
+    text-transform: capitalize;
+    margin-right: 0px;
+    margin-left: 20px;
+    margin-bottom: 27px;
+  }
 }
 
 .gallery-item__title {
@@ -46,6 +111,12 @@
   color: @black-two;
   text-align: left;
   text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    min-width: 112px;
+  }
 }
 
 .gallery-item__likes {
@@ -67,90 +138,7 @@
     opacity: 0.3;
     left: 20px;
   }
-}
-
-@media (min-width: @tablet-width) {
-
-  .gallery__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 68px;
-  }
-  .gallery-item {
-    width: 324px;
-    height: 347px;
-    box-sizing: border-box;
-    padding: 0;
-    position: relative;
-    background-color: @light-grey;
-    margin-bottom: 0px;
-
-    &--photo-1 {
-      width: 648px;
-      height: 480px;
-      margin: 0 auto;
-
-    }
-    &--photo-2 {
-
-      margin-left: 60px;
-
-
-    }
-    &--photo-3 {
-      margin-right: 60px;
-      background-color: @dark-grey;
-    }
-    &--photo-4 {
-      margin-left: 60px;
-      margin-right: auto;
-      background-color: @dark-grey;
-    }
-  }
-
-  .gallery-item__image {
-    display: block;
-    width: 324px;
-    height: 267px;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    &--photo-1 {
-      width: 648px;
-      height: 400px;
-      background-image: url(../img/photo-sunset-tablet@1x.jpg);
-    }
-    &--photo-2 {
-      background-image: url(../img/photo-cactus-tablet@1x.jpg);
-
-    }
-    &--photo-3 {
-      background-image: url(../img/photo-roads-tablet@1x.jpg);
-    }
-    &--photo-4 {
-      background-image: url(../img/photo-bridge-tablet@1x.jpg);
-    }
-  }
-  .gallery-item__text {
-    display: block;
-    width: 179px;
-    margin-left: 20px;
-    height: 37px;
-    font-size: 14px;
-    line-height: 1.71;
-    text-align: left;
-    text-transform: capitalize;
-    margin-right: 0px;
-    margin-left: 20px;
-    margin-bottom: 27px;
-  }
-  .gallery-item__title {
-    text-transform: uppercase;
-    display: block;
-    font-weight: bold;
-    min-width: 112px;
-  }
-
-  .gallery-item__likes {
+  @media (min-width: @tablet-width) {
     position: absolute;
     min-width: 15px;
     display: block;
@@ -166,10 +154,4 @@
       left: -30px;
     }
   }
-  }
-
-
-
-
-
-
+}
