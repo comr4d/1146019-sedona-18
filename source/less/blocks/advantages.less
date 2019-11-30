@@ -1,5 +1,9 @@
 .advantages {
   width: 320px;
+  margin: 0 auto;
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
 }
 
 .advantages__wrapper {
@@ -12,18 +16,53 @@
   color: @white;
   list-style: none;
   padding: 0;
+  @media (min-width: @tablet-width){
+    width: @tablet-width;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
   padding: 20px;
-
+  background-color: @light-grey-blue;
+  position: relative;
   &--blue-back {
-    background-color: @light-grey-blue;
+    color: @white;
+    &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 37px;
+    position: absolute;
+    background: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 37px;
+    top: -15px;
+    left: 0px;
   }
-
+  }
   &--grey-back {
     color: @black;
     background-color: @light-grey;
+  }
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    display: block;
+    width: 256px;
+    height: 256px;
+    &--blue-back {
+      padding: 40px 45px;
+      &:before {
+        display: none;
+      }
+    }
+    &--grey-back {
+      padding: 40px 45px;
+    }
+    &:nth-child(n+4):not(.advantages__image--bridge) {
+      order: 1;
+    }
   }
 }
 
@@ -31,6 +70,18 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
+  color: inherit;
+  @media (min-width: @tablet-width) {
+    width: 151px;
+    font-size: 21px;
+    margin: 0px auto;
+  }
+}
+
+.advantages__description {
+  @media (min-width: @tablet-width) {
+  min-width: 162px;
+}
 }
 
 .advantages__image {
@@ -38,14 +89,25 @@
   width: 320px;
   height: 260px;
   object-fit: contain;
-
   &--city {
     background: url("../img/photo-city-1-x.png");
     background-position: -100px;
   }
-
   &--bridge {
     background: url("../img/photo-bridge-1-x.png");
     background-position: -100px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 512px;
+    height: 256px;
+    object-fit: contain;
+    &--city {
+      background: url("../img/photo-city-1-x.png");
+      background-repeat: no-repeat;
+    }
+    &--bridge {
+      background: url("../img/photo-bridge-1-x.png");
+      background-repeat: no-repeat;
+    }
   }
 }

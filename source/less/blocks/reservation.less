@@ -4,6 +4,11 @@
   line-height: 1.71;
   color: @black;
   margin: auto;
+  margin-top: 33px;
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin-top: 57px;
+  }
 }
 
 .reservation__wrapper {
@@ -15,6 +20,20 @@
   font-weight: bold;
   line-height: 1.24;
   color: @black-three;
+  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 0.87;
+  }
+}
+
+.reservation__description {
+  margin: 0 auto;
+  width: 270px;
+  margin-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    width: 454px;
+  }
 }
 
 .reservation__button {
@@ -23,4 +42,21 @@
   font-size: 21px;
   line-height: 1.24;
   padding: 15px;
+  margin-bottom: 49px;
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
+}
+
+.reservation__map {
+  margin-top: 49px;
+  background: url("../img/bg-map-mobile@1x.jpg");
+  width: 320px;
+  height: 350px;
+  object-fit: contain;
+  @media (min-width: @tablet-width) {
+    background: url("../img/bg-map-tablet@1x.jpg");
+    width: 768px;
+    height: 350px;
+  }
 }
