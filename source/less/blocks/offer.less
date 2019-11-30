@@ -33,6 +33,9 @@
       order: 1;
     }
   }
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
 }
 
 .offer__title {
@@ -90,9 +93,9 @@
     &--housing {
       &:before {
       content: "";
-      background-size: 77px 68px;
-      width: 77px;
-      height: 68px;
+      background-size: 75px 72px;
+      width: 75px;
+      height: 72px;
       top: 10px;
       left: 90px;
       fill: red;
@@ -101,9 +104,9 @@
     &--souvenirs {
       &:before {
         content: "";
-        background-size: 77px 68px;
-        width: 77px;
-        height: 68px;
+        background-size: 64px 75px;
+        width: 64px;
+        height: 75px;
         top: 10px;
         left: 90px;
         fill: red;
@@ -120,6 +123,23 @@
         fill: red;
     }
 }
+}
+  @media (min-width: @desktop-width) {
+    &--housing {
+      &:before {
+      left: 160px;
+    }
+  }
+    &--souvenirs {
+      &:before {
+      left: 170px;
+      }
+  }
+    &--food {
+      &:before {
+      left: 160px;
+    }
+  }
 }
 }
 

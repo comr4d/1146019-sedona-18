@@ -8,11 +8,21 @@
     margin: 0;
     height: 56px;
 }
+@media (min-width: @desktop-width) {
+  width: auto;
+  margin: 0;
+  height: 56px;
+}
 }
 
 .main-nav__wrapper {
   @media (min-width: @tablet-width) {
     width: 768px;
+    margin: 0 auto;
+    height: 56px;
+  }
+  @media (min-width: @desktop-width) {
+    width: auto;
     margin: 0 auto;
     height: 56px;
   }
@@ -49,6 +59,13 @@
   position: relative;
   @media (min-width: @tablet-width) {
     width: 768px;
+    min-height: 56px;
+    margin: 0 auto;
+    color: @black-two;
+    background-color: @white;
+  }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
     min-height: 56px;
     margin: 0 auto;
     color: @black-two;
@@ -113,7 +130,20 @@
       }
   }
 }
+@media (min-width: @desktop-width) {
+  width: 239px;
+  height: 56px;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+  color: @black-two;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 0px;
+  margin-right: 0px;
 }
+}
+
 
 
 

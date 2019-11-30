@@ -4,6 +4,9 @@
   @media (min-width: @tablet-width) {
     width: @tablet-width;
   }
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .advantages__wrapper {
@@ -20,6 +23,9 @@
     width: @tablet-width;
     display: flex;
     flex-wrap: wrap;
+  }
+  @media (min-width: @desktop-width){
+    width: @desktop-width;
   }
 }
 
@@ -63,6 +69,9 @@
     &:nth-child(n+4):not(.advantages__image--bridge) {
       order: 1;
     }
+  }
+  @media (min-width: @desktop-width) {
+      width: 400px;
   }
 }
 
@@ -110,4 +119,18 @@
       background-repeat: no-repeat;
     }
   }
+  @media (min-width: @desktop-width) {
+    width: 800px;
+
+    &--city {
+      background: url("../img/photo-city-1-x@2x.png");
+      background-repeat: no-repeat;
+      background-position: -220px -100px;
+    }
+    &--bridge {
+      background: url("../img/photo-bridge-1-x@2x.png");
+      background-repeat: no-repeat;
+      background-position: 0px -120px;
+    }
+}
 }
