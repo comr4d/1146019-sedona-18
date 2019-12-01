@@ -1,5 +1,7 @@
 .form {
   width: 100%;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .form__wrapper {
@@ -14,5 +16,8 @@
     flex-wrap: wrap;
     margin: 0 auto;
     margin-bottom: 61px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 960px;
   }
 }
