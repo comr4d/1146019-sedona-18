@@ -7,15 +7,17 @@
 }
 
 .copyright__text {
+  display: inline-block;
   width: 91px;
   font-size: 14px;
   line-height: 1.86;
   color: @black-three;
+  margin-top: 10px;
   @media (min-width: @tablet-width) {
     display: inline-block;
     vertical-align: baseline;
     margin-right: 10px;
-    margin-top: 4px;
+    margin-top: 10px;
     width: 91px;
     font-weight: normal;
     font-style: normal;
@@ -25,13 +27,15 @@
 .copyright__link {
   display:inline-block;
   vertical-align: top;
-  width: 27px;
-  height: 34px;
+  width: 37px;
+  height: 44px;
 }
 
 .copyright__logo {
-  width: 27px;
-  height: 34px;
+  display: block;
+  box-sizing: border-box;
+  width: 37px;
+  height: 44px;
   fill: @black-two;
   &:hover {
     fill: @light-grey-blue;
