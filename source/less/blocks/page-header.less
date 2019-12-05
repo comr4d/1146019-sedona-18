@@ -23,10 +23,23 @@
     height: 102px;
   }
   @media (min-width: @desktop-width) {
+    display: none;
     top: 0;
     left: 550px;
     order: 2;
     height: 102px;
+  }
+  &--desktop {
+    display: none;
+    @media (min-width: @desktop-width) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 510px;
+      order: 2;
+      width: 187px;
+      height: 96px;
+  }
   }
 }
 

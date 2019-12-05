@@ -1,3 +1,8 @@
+.video__wrapper {
+  position: relative;
+  z-index: 20;
+}
+
 .video__title {
   font-size: 18px;
   font-weight: bold;
@@ -29,6 +34,8 @@
   height: 201px;
   background: url("../img/video-mobile-jpg.png");
   margin: 0 auto;
+  position: relative;
+
   @media (min-width: @tablet-width) {
     width: 648px;
     height: 499px;
@@ -41,3 +48,123 @@
   }
 }
 
+
+.video__controls {
+  position: absolute;
+  bottom: -66px;
+  right: 21px;
+  width: 280px;
+  height: 101px;
+  background-color: @black-30;
+    &:before {
+      content: "";
+      display: block;
+      width: 235px;
+      height: 3px;
+      position: absolute;
+      background-color: @grey;
+      opacity: 0.6;
+      top: 17px;
+      left: 20px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      background-color: @white;
+      top: 15px;
+      left: 80px;
+      border-radius: 50%;
+      opacity: 1;
+    }
+    @media (min-width: @tablet-width) {
+      bottom: 0px;
+      right: 60px;
+      width: 648px;
+      height: 93px;
+      &:before {
+        top: 45px;
+        width: 389px;
+        left: 80px;
+        opacity: 0.6;
+      }
+      &:after {
+        width: 10px;
+      height: 10px;
+        top: 42px;
+        left: 180px;
+      }
+    }
+    @media (min-width: @desktop-width) {
+      right: 200px;
+      width: 800px;
+      &:before {
+        width: 540px;
+      }
+      &:after {
+        left: 205px;
+      }
+    }
+  }
+
+  .video__ikons {
+    fill: #5c6870;
+    height: 20px;
+    z-index: 10;
+    bottom: 12px;
+    position: absolute;
+    &--replay {
+      left: 25px;
+      width: 16px;
+    }
+    &--fullscreen {
+      width: 32px;
+      left: 237px;
+      right: 23px;
+    }
+    &--subtitles{
+      width: 32px;
+      left: 174px;
+    }
+    @media (min-width: @tablet-width) {
+      fill: @white;
+      bottom: 20px;
+    &--replay {
+      left: 25px;
+      width: 16px;
+    }
+    &--fullscreen {
+      width: 32px;
+      left: 587px;
+    }
+    &--subtitles{
+      width: 32px;
+      left: 524px;
+  }
+}
+@media (min-width: @desktop-width) {
+&--replay {
+  left: 35px;
+}
+&--fullscreen {
+  left: 738px;
+}
+&--subtitles{
+  left: 675px;
+}
+}
+}
+
+.video__grey-back {
+  position: absolute;
+  fill: #5c6870;
+  width: 280px;
+  height: 66px;
+  background-color: @grey;
+  bottom: 0;
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
