@@ -3,9 +3,13 @@
   &--impression {
     box-sizing: border-box;
     width: 210px;
-    min-height: 200px;
+    min-height: 250px;
     margin: 0 auto;
     padding: 0;
+    position: relative;
+  }
+  &--radio {
+
   }
   @media (min-width: @tablet-width) {
     display: block;
@@ -60,6 +64,7 @@
   font-size: 18px;
   &--radio {
     min-width: 235px;
+    margin-bottom: 47px;
   }
   @media (min-width: @tablet-width) {
     min-width: 163px;
@@ -144,9 +149,24 @@
   font-size: 14px;
   line-height: 1.86;
   color: @black;
+
   &--radio {
     margin-left: 30px;
-    margin-right: auto;
+    margin-right: 0px;
+    margin-bottom: 52px;
+    display: inline-block;
+    min-width: 177px;
+    &:before {
+      content: "";
+      top: -5px;
+      left: -5px;
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      border: solid 5px @light-grey;
+      background-color: @light-grey;
+      border-radius: 50%;
+    }
   }
   &--contacts {
     position: relative;
@@ -279,6 +299,7 @@
   margin-bottom: 10px;
   border: none;
   outline: none;
+
   &--name {
     width: 230px
   }
