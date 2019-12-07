@@ -1,3 +1,34 @@
+input[type=radio]:checked + label::before {
+  content: "";
+  top: -15px;
+  left: -65px;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  background-color: @light-grey;
+  background-image: url(../img/icon-circle.png);
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+
+input[type=checkbox]:checked + label::before {
+  content: "";
+  top: -15px;
+  left: -95px;
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  background-color: @light-grey;
+  background-image: url(../img/icon-tick.svg);
+  background-repeat: no-repeat;
+  background-position: 16px 16px;
+}
+
+
 .fieldset {
   border: none;
   &--impression {
@@ -8,7 +39,11 @@
     padding: 0;
     position: relative;
   }
-  &--radio {
+  &--attractions {
+    box-sizing: border-box;
+    width: 210px;
+    min-height: 350px;
+    margin: 0 auto;
 
   }
   @media (min-width: @tablet-width) {
@@ -35,6 +70,9 @@
     &--attractions {
       width: 100%;
       order: 1;
+      padding-left: 120px;
+      min-height: 150px;
+      margin-bottom: 65px;
     }
     &--emotions {
       width: 100%;
@@ -51,7 +89,9 @@
     &--impression {
     }
     &--attractions {
+
       width: 100%;
+      padding-left: 100px;
     }
     &--emotions {
       width: 100%;
@@ -66,6 +106,10 @@
     min-width: 235px;
     margin-bottom: 47px;
   }
+  &--attractions {
+    min-width: 235px;
+    margin-bottom: 47px;
+  }
   @media (min-width: @tablet-width) {
     min-width: 163px;
     font-size: 21px;
@@ -75,6 +119,10 @@
     margin-bottom: 40px;
     &--radio {
       min-width: 235px;
+    }
+    &--attractions {
+      width: 278px;
+      margin-bottom: 47px;
     }
     &--contacts {
       position: relative;
@@ -141,31 +189,98 @@
           }
       }
   }
+  @media (min-width: @desktop-width) {
+    &--contacts {
+      &:after {
+        width: 210px;
+
+        }
+        &:before {
+        width: 210px;
+        }
+      }
+      &--attractions {
+      &:after {
+        width: 210px;
+        }
+        &:before {
+        width: 210px;
+        }
+      }
+      &--emotions {
+      &:after {
+        width: 210px;
+        }
+        &:before {
+        width: 210px;
+        }
+      }
+  }
 }
 
 .fieldset__label {
-  width: 36px;
+  min-width: 36px;
   height: 11px;
   font-size: 14px;
   line-height: 1.86;
   color: @black;
-
   &--radio {
     margin-left: 30px;
     margin-right: 0px;
     margin-bottom: 52px;
     display: inline-block;
     min-width: 177px;
+    position: relative;
+    &:hover::before {
+      background-color: @grey;
+    }
+    &:active::before {
+      background-color: #d5d5d5;
+      opacity: 0.3;
+    }
     &:before {
       content: "";
-      top: -5px;
-      left: -5px;
+      top: -15px;
+      left: -65px;
       position: absolute;
-      width: 46px;
-      height: 46px;
-      border: solid 5px @light-grey;
+      width: 54px;
+      height: 54px;
       background-color: @light-grey;
       border-radius: 50%;
+      &:hover {
+        background-color: @grey;
+      }
+      &:active::before {
+        background-color: #d5d5d5;
+        opacity: 0.3;
+      }
+    }
+  }
+  &--checkbox {
+    margin-left: 30px;
+    margin-right: 0px;
+    margin-bottom: 65px;
+    display: inline-block;
+    min-width: 110px;
+    position: relative;
+    text-align: left;
+    &:hover::before {
+      background-color: @grey;
+    }
+    &:active::before {
+      background-color: #d5d5d5;
+      opacity: 0.3;
+    }
+    &:before {
+      content: "";
+      top: -15px;
+      left: -95px;
+      display: inline-block;
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      background-color: @light-grey;
+      border-radius: 10%;
     }
   }
   &--contacts {
@@ -200,6 +315,14 @@
   }
 }
   @media (min-width: @tablet-width) {
+    &--radio {
+      margin-left: 50px;
+      min-width: 200px;
+    }
+    &--checkbox {
+      margin-right: 100px;
+      min-width: 120px;
+    }
     &--contacts {
     display: block;
     min-width: 162px;
@@ -247,6 +370,13 @@
     }
   }
   @media (min-width: @desktop-width) {
+    &--checkbox {
+      margin-right: 70px;
+      min-width: 120px;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
     &--contacts {
     display: inline-block;
     min-width: 170px;
@@ -379,6 +509,13 @@
 }
 
 .fieldset__radio {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+  }
+}
+.fieldset__checkbox {
+  display: none;
   @media (min-width: @tablet-width) {
   }
 }

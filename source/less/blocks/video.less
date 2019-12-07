@@ -35,7 +35,6 @@
   background: url("../img/video-mobile-jpg.png");
   margin: 0 auto;
   position: relative;
-
   @media (min-width: @tablet-width) {
     width: 648px;
     height: 499px;
@@ -115,18 +114,30 @@
     z-index: 10;
     bottom: 12px;
     position: absolute;
+    &:hover {
+      fill: @black;
+    }
     &--replay {
       left: 25px;
       width: 16px;
+      &:active {
+        opacity: 0.3;
+      }
     }
     &--fullscreen {
       width: 32px;
       left: 237px;
       right: 23px;
+      &:active {
+        opacity: 0.3;
+      }
     }
     &--subtitles{
       width: 32px;
       left: 174px;
+      &:active {
+        opacity: 0.3;
+      }
     }
     @media (min-width: @tablet-width) {
       fill: @white;
@@ -134,14 +145,35 @@
     &--replay {
       left: 25px;
       width: 16px;
+      &:hover {
+        fill: @white;
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.3;
+      }
     }
     &--fullscreen {
       width: 32px;
       left: 587px;
+      &:hover {
+        fill: @white;
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.3;
+      }
     }
     &--subtitles{
       width: 32px;
       left: 524px;
+      &:hover {
+        fill: @white;
+        opacity: 0.6;
+      }
+      &:active {
+        opacity: 0.3;
+      }
   }
 }
 @media (min-width: @desktop-width) {
