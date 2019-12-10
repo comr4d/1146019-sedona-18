@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+
   <title>Sedona_photo</title>
 </head>
 
@@ -42,10 +42,14 @@
             </svg></button>
         </div>
       </nav>
-      <a class="page-header__logo" href=""><img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
-          width="102" height="83" alt="Логотип Sedona"></a>
-          <a class="page-header__logo page-header__logo--desktop" href=""><img class="page-header__logo-image" src="img/logo-sedona-desktop.svg"
-            width="187" height="96" alt="Логотип Sedona"></a>
+      <a class="page-header__logo" href="">
+          <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg"
+alt="Логотип Sedona">
+      </picture>
+    </a>
       <div class="page-header__img-wrapper page-header__img-wrapper--photo">
         <img class="page-header__text page-header__text--photo" src="img/sedona.svg" alt="">
       </div>
