@@ -1,18 +1,20 @@
 .main-nav {
   width: 320px;
   background-color: #81b3d2;
-  margin-bottom: 20px;
   margin: 0 auto;
+  margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     width: auto;
     margin: 0;
     height: 56px;
-}
-@media (min-width: @desktop-width) {
-  width: auto;
-  margin: 0;
-  height: 56px;
-}
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin: 0;
+    height: 56px;
+  }
 }
 
 .main-nav__wrapper {
@@ -21,6 +23,7 @@
     margin: 0 auto;
     height: 56px;
   }
+
   @media (min-width: @desktop-width) {
     width: auto;
     margin: 0 auto;
@@ -47,6 +50,7 @@
   border: none;
   background-color: @white;
   padding: 0;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -59,6 +63,7 @@
   color: @white;
   background-color: @light-grey-blue;
   position: relative;
+
   @media (min-width: @tablet-width) {
     width: 768px;
     min-height: 56px;
@@ -66,6 +71,7 @@
     color: @black-two;
     background-color: @white;
   }
+
   @media (min-width: @desktop-width) {
     width: @desktop-width;
     min-height: 56px;
@@ -81,7 +87,8 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 2.22;
-  box-shadow: inset 0px 1px 0 0 @white-20;
+  box-shadow: inset 0 1px 0 0 @white-20;
+
   &--link {
     .link;
     width: 320px;
@@ -90,14 +97,17 @@
     color: @white;
     text-align: center;
     padding-top: 10px;
+
     &:hover {
       background-color: @bg-hover;
     }
+
     &:active {
       background-color: @bg-active;
       color: @white-30;
     }
   }
+
   @media (min-width: @tablet-width) {
     width: 140px;
     height: 56px;
@@ -107,63 +117,71 @@
     color: @black-two;
     display: inline-block;
     vertical-align: top;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+
     &:nth-child(2) {
-    margin-right: 160px
+      margin-right: 160px;
     }
+
     &--logo {
-    width: 156px;
-    height: 56px;
+      width: 156px;
+      height: 56px;
     }
+
     &--link {
       width: 100%;
       height: 100%;
       padding-top: 10px;
       color: @black-two;
       box-sizing: border-box;
+
       &:hover {
         background-color: @white;
         color: @light-grey-blue;
       }
+
       &:active {
         background-color: @white;
         color: @black-30;
       }
-  }
+    }
+
     &--active {
       color: @active-color;
-    &:hover {
-      color: #604e43;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
     }
-    &:active {
-      color: rgba(118, 99, 87, 0.3);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 239px;
+    height: 56px;
+    font-size: 14px;
+    line-height: 1.86;
+    text-align: center;
+    color: @black-two;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0;
+    margin-right: 0;
+
+    &--active {
+      color: @active-color;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        color: rgba(118, 99, 87, 0.3);
+      }
     }
   }
 }
-@media (min-width: @desktop-width) {
-  width: 239px;
-  height: 56px;
-  font-size: 14px;
-  line-height: 1.86;
-  text-align: center;
-  color: @black-two;
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 0px;
-  margin-right: 0px;
-  &--active {
-    color: @active-color;
-  &:hover {
-    color: #604e43;
-  }
-  &:active {
-    color: rgba(118, 99, 87, 0.3);
-  }
-}
-}
-}
-
-
-
-
