@@ -136,6 +136,26 @@ input[type="checkbox"]:checked + label::before {
       width: 278px;
       margin-bottom: 47px;
       position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        left: 360px;
+        top: 12px;
+        background-color: @grey;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        right: 360px;
+        top: 12px;
+        background-color: @grey;
+      }
     }
 
     &--contacts {
@@ -160,26 +180,6 @@ input[type="checkbox"]:checked + label::before {
         top: 12px;
         background-color: @grey;
       }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 2px;
-      left: 360px;
-      top: 12px;
-      background-color: @grey;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 2px;
-      right: 360px;
-      top: 12px;
-      background-color: @grey;
     }
   }
 
