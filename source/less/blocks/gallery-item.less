@@ -217,7 +217,9 @@
   color: @black-two;
   text-align: left;
   margin-left: 40px;
-    &:before {
+  margin-top: 7px;
+  position: relative;
+    /*&:before {
     content: "";
     position: absolute;
     width: 22px;
@@ -225,15 +227,17 @@
     background: url(../img/icon-like.svg);
     opacity: 0.3;
     left: 0px;
-  }
+  }*/
   @media (min-width: @tablet-width) {
     position: absolute;
     min-width: 15px;
     right: 20px;
     bottom: 50px;
-    &:before {
+    display: inline-block;
+    margin-left: 0px;
+    /*&:before {
       left: -30px;
-    }
+    }*/
   }
   @media (min-width: @desktop-width) {
     color: @white;
@@ -241,4 +245,19 @@
       fill: @white;
     }
   }
+}
+
+.gallery-item__icon-like {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  opacity: 0.3;
+  left: -40px;
+  @media (min-width: @tablet-width) {
+    left: -30px;
+  }
+  @media (min-width: @desktop-width) {
+    fill: @white;
+    opacity: 1;
+}
 }
