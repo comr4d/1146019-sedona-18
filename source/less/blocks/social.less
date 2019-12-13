@@ -1,6 +1,7 @@
 .social {
   margin-top: 41px;
   margin-bottom: 51px;
+
   @media (min-width: @tablet-width) {
     width: 150px;
     display: block;
@@ -14,9 +15,10 @@
   display: flex;
   list-style: none;
   padding-left: 84px;
+
   @media (min-width: @tablet-width) {
-    padding-left: 0px;
-    margin: 0px;
+    padding-left: 0;
+    margin: 0;
   }
 }
 
@@ -25,9 +27,8 @@
   width: 46px;
   height: 48px;
   background-color: @light-grey-blue;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 6px;
-
 }
 
 .social__link {
@@ -37,26 +38,29 @@
   height: 48px;
 }
 
-.social__ikon {
+.social__icon {
   display: block;
   fill: @white;
+
   &:active {
     fill: @white-30;
   }
+
   &--twitter {
     width: 18px;
     height: 14px;
     padding: 15px 15px;
   }
+
   &--facebook {
     width: 9px;
     height: 18px;
     padding: 13px 19px;
   }
+
   &--youtube {
     width: 20px;
     height: 14px;
     padding: 16px 13px;
   }
 }
-

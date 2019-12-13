@@ -3,11 +3,13 @@
   height: 58px;
   font-size: 21px;
   line-height: 1.24;
+
   @media (min-width: @tablet-width) {
     order: 1;
     width: 324px;
-    margin-left: 0px;
-    &:after {
+    margin-left: 0;
+
+    &::after {
       content: "* — обязательные поля";
       position: absolute;
       width: 200px;
@@ -20,11 +22,13 @@
       bottom: 30px;
     }
   }
+
   @media (min-width: @desktop-width) {
     order: 1;
     width: 480px;
-    margin-left: 0px;
-    &:after {
+    margin-left: 0;
+
+    &::after {
       content: "* — обязательные поля";
       position: absolute;
       width: 200px;
@@ -37,4 +41,3 @@
     }
   }
 }
-

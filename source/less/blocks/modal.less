@@ -2,18 +2,20 @@
   display: none;
   width: 320px;
   height: 280px;
-  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
   background-color: @white;
   box-sizing: border-box;
   padding-top: 46px;
   position: fixed;
   z-index: 200;
+
   &--failure {
     left: 50%;
     top: 50%;
     margin-left: -160px;
     margin-top: -375px;
   }
+
   &--success {
     height: 323px;
     left: 50%;
@@ -21,26 +23,28 @@
     margin-left: -160px;
     margin-top: -25px;
   }
+
   @media (min-width: @tablet-width) {
     padding-top: 59px;
+
     &--failure {
-    width: 400px;
-    height: 347px;
-    left: 50%;
-    top: 50%;
-    margin-left: -190px;
-    margin-top: -25px;
+      width: 400px;
+      height: 347px;
+      left: 50%;
+      top: 50%;
+      margin-left: -190px;
+      margin-top: -25px;
     }
+
     &--success {
-    width: 640px;
-    height: 347px;
-    left: 50%;
-    top: 50%;
-    margin-left: -320px;
-    margin-top: -440px;
+      width: 640px;
+      height: 347px;
+      left: 50%;
+      top: 50%;
+      margin-left: -320px;
+      margin-top: -440px;
     }
   }
-
 }
 
 .modal__intro {
@@ -50,16 +54,19 @@
   color: @black-two;
   margin: 0 auto;
   margin-bottom: 30px;
+
   @media (min-width: @tablet-width) {
     font-size: 30px;
     font-weight: bold;
     line-height: 0.87;
     color: @black-two;
+
     &--failure {
-    width: 240px;
+      width: 240px;
     }
+
     &--success {
-    width: 414px;
+      width: 414px;
     }
   }
 }
@@ -74,12 +81,15 @@
   text-transform: none;
   margin: 0 auto;
   margin-bottom: 29px;
+
   @media (min-width: @tablet-width) {
     text-transform: uppercase;
     margin-bottom: 40px;
+
     &--failure {
       width: 277px;
     }
+
     &--success {
       width: 414px;
     }
@@ -93,9 +103,11 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
+
   &--success {
     width: 280px;
   }
+
   &--failure {
     width: 180px;
   }
@@ -108,6 +120,7 @@
   background-color: @light-grey;
   padding: 20px;
   box-sizing: border-box;
+
   @media (min-width: @tablet-width) {
     height: 146px;
     padding: 44px;

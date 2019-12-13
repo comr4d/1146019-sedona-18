@@ -1,8 +1,10 @@
 .copyright {
+  box-sizing: border-box;
+  padding: 10px;
+
   @media (min-width: @tablet-width) {
-    width: 150px;
-    height: 35px;
-    margin-top: 5px;
+    min-width: 150px;
+    height: 55px;
   }
 }
 
@@ -12,40 +14,40 @@
   font-size: 14px;
   line-height: 1.86;
   color: @black-three;
-  margin-top: 10px;
+
   @media (min-width: @tablet-width) {
     display: inline-block;
     vertical-align: baseline;
     margin-right: 10px;
-    margin-top: 10px;
-    width: 91px;
     font-weight: normal;
     font-style: normal;
   }
 }
 
 .copyright__link {
-  display:inline-block;
+  display: inline-block;
   vertical-align: top;
-  width: 37px;
-  height: 44px;
+  width: 34px;
+  height: 27px;
 }
 
 .copyright__logo {
   display: block;
   box-sizing: border-box;
-  width: 37px;
-  height: 44px;
+  width: 34px;
+  height: 27px;
   fill: @black-two;
+
   &:hover {
     fill: @light-grey-blue;
   }
+
   &:active {
     opacity: 0.3;
   }
+
   @media (min-width: @tablet-width) {
     display: inline-block;
     vertical-align: baseline;
   }
 }
-

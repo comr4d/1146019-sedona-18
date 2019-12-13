@@ -1,4 +1,4 @@
-input[type=radio]:checked + label::before {
+input[type="radio"]:checked + label::before {
   content: "";
   top: -15px;
   left: -65px;
@@ -6,16 +6,17 @@ input[type=radio]:checked + label::before {
   width: 54px;
   height: 54px;
   background-color: @light-grey;
-  background-image: url(../img/icon-circle.png);
+  background-image: url("../img/icon-circle.png");
   background-repeat: no-repeat;
   background-position: 16px 16px;
+
   &:hover {
     opacity: 0.3;
   }
 }
 
 
-input[type=checkbox]:checked + label::before {
+input[type="checkbox"]:checked + label::before {
   content: "";
   top: -15px;
   left: -95px;
@@ -23,7 +24,7 @@ input[type=checkbox]:checked + label::before {
   width: 54px;
   height: 54px;
   background-color: @light-grey;
-  background-image: url(../img/icon-tick.svg);
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 16px 16px;
 }
@@ -31,6 +32,7 @@ input[type=checkbox]:checked + label::before {
 
 .fieldset {
   border: none;
+
   &--impression {
     box-sizing: border-box;
     width: 210px;
@@ -39,34 +41,39 @@ input[type=checkbox]:checked + label::before {
     padding: 0;
     position: relative;
   }
+
   &--attractions {
     box-sizing: border-box;
     width: 210px;
     min-height: 350px;
     margin: 0 auto;
-
   }
+
   @media (min-width: @tablet-width) {
     display: block;
     width: 324px;
-    padding: 0px;
+    padding: 0;
     margin: 0;
     margin-bottom: 75px;
+
     &--user-name {
       box-sizing: border-box;
       order: 1;
       padding-left: 40px;
     }
+
     &--contacts {
       width: 100%;
       order: 1;
     }
+
     &--impression {
       order: 0;
       border-right: 1px solid @grey;
       box-sizing: border-box;
       padding-right: 40px;
     }
+
     &--attractions {
       width: 100%;
       order: 1;
@@ -74,25 +81,25 @@ input[type=checkbox]:checked + label::before {
       min-height: 150px;
       margin-bottom: 65px;
     }
+
     &--emotions {
       width: 100%;
       order: 1;
     }
   }
-    @media (min-width: @desktop-width) {
+
+  @media (min-width: @desktop-width) {
     width: 480px;
-    &--user-name {
-    }
+
     &--contacts {
       width: 100%;
     }
-    &--impression {
-    }
-    &--attractions {
 
+    &--attractions {
       width: 100%;
       padding-left: 100px;
     }
+
     &--emotions {
       width: 100%;
     }
@@ -102,14 +109,17 @@ input[type=checkbox]:checked + label::before {
 .fieldset__legend {
   font-weight: bold;
   font-size: 18px;
+
   &--radio {
     min-width: 235px;
     margin-bottom: 47px;
   }
+
   &--attractions {
     min-width: 235px;
     margin-bottom: 47px;
   }
+
   @media (min-width: @tablet-width) {
     min-width: 163px;
     font-size: 21px;
@@ -117,104 +127,116 @@ input[type=checkbox]:checked + label::before {
     line-height: 1.24;
     color: @black-two;
     margin-bottom: 40px;
+
     &--radio {
       min-width: 235px;
     }
+
     &--attractions {
       width: 278px;
       margin-bottom: 47px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        left: 360px;
+        top: 12px;
+        background-color: @grey;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        right: 360px;
+        top: 12px;
+        background-color: @grey;
+      }
     }
+
     &--contacts {
       position: relative;
-      &:after {
+
+      &::after {
         content: "";
         position: absolute;
         width: 120px;
         height: 2px;
-        left:  360px;
+        left: 360px;
         top: 12px;
         background-color: @grey;
-        }
-        &:before {
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 2px;
-        right:  360px;
-        top: 12px;
-        background-color: @grey;
-        }
       }
-      &--attractions {
-        position: relative;
-        width: 278px;
-      &:after {
+
+      &::before {
         content: "";
         position: absolute;
         width: 120px;
         height: 2px;
-        left:  360px;
+        right: 360px;
         top: 12px;
         background-color: @grey;
-        }
-        &:before {
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 2px;
-        right:  360px;
-        top: 12px;
-        background-color: @grey;
-        }
       }
-      &--emotions {
-        position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 2px;
-        left:  345px;
-        top: 12px;
-        background-color: @grey;
-        }
-        &:before {
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 2px;
-        right:  345px;
-        top: 12px;
-        background-color: @grey;
-          }
-      }
+    }
   }
+
+  &--emotions {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 2px;
+      left: 345px;
+      top: 12px;
+      background-color: @grey;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 2px;
+      right: 345px;
+      top: 12px;
+      background-color: @grey;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     &--contacts {
-      &:after {
+      &::after {
         width: 210px;
+      }
 
-        }
-        &:before {
+      &::before {
         width: 210px;
-        }
       }
-      &--attractions {
-      &:after {
+    }
+
+    &--attractions {
+      &::after {
         width: 210px;
-        }
-        &:before {
-        width: 210px;
-        }
       }
-      &--emotions {
-      &:after {
+
+      &::before {
         width: 210px;
-        }
-        &:before {
-        width: 210px;
-        }
       }
+    }
+
+    &--emotions {
+      &::after {
+        width: 210px;
+      }
+
+      &::before {
+        width: 210px;
+      }
+    }
   }
 }
 
@@ -224,21 +246,25 @@ input[type=checkbox]:checked + label::before {
   font-size: 14px;
   line-height: 1.86;
   color: @black;
+
   &--radio {
     margin-left: 30px;
-    margin-right: 0px;
+    margin-right: 0;
     margin-bottom: 52px;
     display: inline-block;
     min-width: 177px;
     position: relative;
+
     &:hover::before {
       background-color: @grey;
     }
+
     &:active::before {
       background-color: #d5d5d5;
       opacity: 0.3;
     }
-    &:before {
+
+    &::before {
       content: "";
       top: -15px;
       left: -65px;
@@ -247,31 +273,37 @@ input[type=checkbox]:checked + label::before {
       height: 54px;
       background-color: @light-grey;
       border-radius: 50%;
+
       &:hover {
         background-color: @grey;
       }
+
       &:active::before {
         background-color: #d5d5d5;
         opacity: 0.3;
       }
     }
   }
+
   &--checkbox {
     margin-left: 30px;
-    margin-right: 0px;
+    margin-right: 0;
     margin-bottom: 65px;
     display: inline-block;
     min-width: 110px;
     position: relative;
     text-align: left;
+
     &:hover::before {
       background-color: @grey;
     }
+
     &:active::before {
       background-color: #d5d5d5;
       opacity: 0.3;
     }
-    &:before {
+
+    &::before {
       content: "";
       top: -15px;
       left: -95px;
@@ -283,9 +315,11 @@ input[type=checkbox]:checked + label::before {
       border-radius: 10%;
     }
   }
+
   &--contacts {
     position: relative;
-    &:after {
+
+    &::after {
       content: "";
       position: absolute;
       right: -75px;
@@ -298,8 +332,9 @@ input[type=checkbox]:checked + label::before {
       background-position: 20px 20px;
       background-image: url("../img/icon-mail.svg");
     }
+
     &:nth-child(2) {
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         right: -67px;
@@ -311,43 +346,40 @@ input[type=checkbox]:checked + label::before {
         background-repeat: no-repeat;
         background-position: 20px 20px;
         background-image: url("../img/icon-phone.svg");
+      }
     }
   }
-}
+
   @media (min-width: @tablet-width) {
     &--radio {
       margin-left: 50px;
       min-width: 200px;
+      width: 58px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.44;
+      text-align: left;
+      color: @black-two;
+      text-transform: capitalize;
     }
+
     &--checkbox {
       margin-right: 100px;
       min-width: 120px;
     }
+
     &--contacts {
-    display: block;
-    min-width: 162px;
-    text-align: left;
-    margin-bottom: 20px;
-    position: relative;
-    &:after {
-      content: "";
-      position: absolute;
-      right: -487px;
-      top: 31px;
       display: block;
-      width: 58px;
-      height: 58px;
-      background-size: 18px 18px;
-      background-color: @dark-grey;
-      background-repeat: no-repeat;
-      background-position: 20px 20px;
-      background-image: url("../img/icon-mail.svg");
-    }
-    &:nth-child(2) {
-      &:after {
+      min-width: 162px;
+      text-align: left;
+      margin-bottom: 20px;
+      position: relative;
+
+      &::after {
         content: "";
         position: absolute;
         right: -487px;
+        top: 31px;
         display: block;
         width: 58px;
         height: 58px;
@@ -355,51 +387,47 @@ input[type=checkbox]:checked + label::before {
         background-color: @dark-grey;
         background-repeat: no-repeat;
         background-position: 20px 20px;
-        background-image: url("../img/icon-phone.svg");
+        background-image: url("../img/icon-mail.svg");
+      }
+
+      &:nth-child(2) {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -487px;
+          display: block;
+          width: 58px;
+          height: 58px;
+          background-size: 18px 18px;
+          background-color: @dark-grey;
+          background-repeat: no-repeat;
+          background-position: 20px 20px;
+          background-image: url("../img/icon-phone.svg");
+        }
+      }
     }
   }
-    }
-    &--radio {
-    width: 58px;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.44;
-    text-align: left;
-    color: @black-two;
-    text-transform: capitalize;
-    }
-  }
+
   @media (min-width: @desktop-width) {
     &--checkbox {
       margin-right: 70px;
       min-width: 120px;
+
       &:last-child {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
+
     &--contacts {
-    display: inline-block;
-    min-width: 170px;
-    text-align: right;
-    &:after {
-      content: "";
-      position: absolute;
-      right: -260px;
-      top: -17px;
-      display: block;
-      width: 58px;
-      height: 58px;
-      background-size: 18px 18px;
-      background-color: @dark-grey;
-      background-repeat: no-repeat;
-      background-position: 20px 20px;
-      background-image: url("../img/icon-mail.svg");
-    }
-    &:nth-child(2) {
-      &:after {
+      display: inline-block;
+      min-width: 170px;
+      text-align: right;
+
+      &::after {
         content: "";
         position: absolute;
         right: -260px;
+        top: -17px;
         display: block;
         width: 58px;
         height: 58px;
@@ -407,12 +435,25 @@ input[type=checkbox]:checked + label::before {
         background-color: @dark-grey;
         background-repeat: no-repeat;
         background-position: 20px 20px;
-        background-image: url("../img/icon-phone.svg");
-    }
-  }
-    }
-    &--radio {
+        background-image: url("../img/icon-mail.svg");
       }
+
+      &:nth-child(2) {
+        &::after {
+          content: "";
+          position: absolute;
+          right: -260px;
+          display: block;
+          width: 58px;
+          height: 58px;
+          background-size: 18px 18px;
+          background-color: @dark-grey;
+          background-repeat: no-repeat;
+          background-position: 20px 20px;
+          background-image: url("../img/icon-phone.svg");
+        }
+      }
+    }
   }
 }
 
@@ -431,51 +472,63 @@ input[type=checkbox]:checked + label::before {
   outline: none;
 
   &--name {
-    width: 230px
+    width: 230px;
   }
+
   &--surname {
-    width: 192px
+    width: 192px;
   }
+
   &--patronymic {
-    width: 194px
+    width: 194px;
   }
 
   &:hover {
     background-color: @grey;
   }
+
   &:active {
     border: solid 4px @grey;
     background-color: @white;
   }
+
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     min-width: 192px;
     height: 58px;
     font-size: 18px;
-    &--surname{
-      width: 192px
+
+    &--surname {
+      width: 192px;
     }
-    &--patronymic{
-      width: 194px
+
+    &--patronymic {
+      width: 194px;
     }
+
     &--contacts {
       width: 100%;
     }
   }
+
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     min-width: 192px;
     height: 58px;
     font-size: 18px;
+
     &--name {
       width: 350px;
     }
-    &--surname{
-      width: 315px
+
+    &--surname {
+      width: 315px;
     }
-    &--patronymic{
-      width: 314px
+
+    &--patronymic {
+      width: 314px;
     }
+
     &--contacts {
       display: inline-block;
       width: 257px;
@@ -487,7 +540,6 @@ input[type=checkbox]:checked + label::before {
   box-sizing: border-box;
   width: 279px;
   height: 160px;
-  font-family: PTSans;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
@@ -496,13 +548,16 @@ input[type=checkbox]:checked + label::before {
   padding: 22px 30px 95px 21px;
   border: none;
   outline: none;
+
   &:hover {
     background-color: @grey;
   }
+
   &:active {
     border: solid 4px @grey;
     background-color: @white;
   }
+
   @media (min-width: @tablet-width) {
     width: 100%;
   }
@@ -510,12 +565,8 @@ input[type=checkbox]:checked + label::before {
 
 .fieldset__radio {
   display: none;
-
-  @media (min-width: @tablet-width) {
-  }
 }
+
 .fieldset__checkbox {
   display: none;
-  @media (min-width: @tablet-width) {
-  }
 }
