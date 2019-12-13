@@ -23,3 +23,18 @@
     width: 960px;
   }
 }
+
+.form__required-field {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 120px;
+  }
+}

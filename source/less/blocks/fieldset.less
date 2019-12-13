@@ -316,7 +316,7 @@ input[type="checkbox"]:checked + label::before {
     }
   }
 
-  &--contacts {
+  &--email {
     position: relative;
 
     &::after {
@@ -332,23 +332,26 @@ input[type="checkbox"]:checked + label::before {
       background-position: 20px 20px;
       background-image: url("../img/icon-mail.svg");
     }
+  }
 
-    &:nth-child(2) {
-      &::after {
-        content: "";
-        position: absolute;
-        right: -67px;
-        display: block;
-        width: 58px;
-        height: 58px;
-        background-size: 18px 18px;
-        background-color: @dark-grey;
-        background-repeat: no-repeat;
-        background-position: 20px 20px;
-        background-image: url("../img/icon-phone.svg");
-      }
+  &--tel {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -67px;
+      display: block;
+      width: 58px;
+      height: 58px;
+      background-size: 18px 18px;
+      background-color: @dark-grey;
+      background-repeat: no-repeat;
+      background-position: 20px 20px;
+      background-image: url("../img/icon-phone.svg");
     }
   }
+
 
   @media (min-width: @tablet-width) {
     &--radio {
@@ -374,11 +377,15 @@ input[type="checkbox"]:checked + label::before {
       text-align: left;
       margin-bottom: 20px;
       position: relative;
+    }
+
+    &--email {
+      position: relative;
 
       &::after {
         content: "";
         position: absolute;
-        right: -487px;
+        right: 0;
         top: 31px;
         display: block;
         width: 58px;
@@ -389,24 +396,28 @@ input[type="checkbox"]:checked + label::before {
         background-position: 20px 20px;
         background-image: url("../img/icon-mail.svg");
       }
+    }
 
-      &:nth-child(2) {
-        &::after {
-          content: "";
-          position: absolute;
-          right: -487px;
-          display: block;
-          width: 58px;
-          height: 58px;
-          background-size: 18px 18px;
-          background-color: @dark-grey;
-          background-repeat: no-repeat;
-          background-position: 20px 20px;
-          background-image: url("../img/icon-phone.svg");
-        }
+    &--tel {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 31px;
+        display: block;
+        width: 58px;
+        height: 58px;
+        background-size: 18px 18px;
+        background-color: @dark-grey;
+        background-repeat: no-repeat;
+        background-position: 20px 20px;
+        background-image: url("../img/icon-phone.svg");
       }
     }
   }
+
 
   @media (min-width: @desktop-width) {
     &--checkbox {
@@ -422,6 +433,10 @@ input[type="checkbox"]:checked + label::before {
       display: inline-block;
       min-width: 170px;
       text-align: right;
+    }
+
+    &--email {
+      position: relative;
 
       &::after {
         content: "";
@@ -437,25 +452,29 @@ input[type="checkbox"]:checked + label::before {
         background-position: 20px 20px;
         background-image: url("../img/icon-mail.svg");
       }
+    }
 
-      &:nth-child(2) {
-        &::after {
-          content: "";
-          position: absolute;
-          right: -260px;
-          display: block;
-          width: 58px;
-          height: 58px;
-          background-size: 18px 18px;
-          background-color: @dark-grey;
-          background-repeat: no-repeat;
-          background-position: 20px 20px;
-          background-image: url("../img/icon-phone.svg");
-        }
+    &--tel {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -260px;
+        display: block;
+        top: -17px;
+        width: 58px;
+        height: 58px;
+        background-size: 18px 18px;
+        background-color: @dark-grey;
+        background-repeat: no-repeat;
+        background-position: 20px 20px;
+        background-image: url("../img/icon-phone.svg");
       }
     }
   }
 }
+
 
 .fieldset__input {
   box-sizing: border-box;
