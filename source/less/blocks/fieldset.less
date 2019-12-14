@@ -9,12 +9,13 @@ input[type="radio"]:checked + label::before {
   background-image: url("../img/icon-circle.png");
   background-repeat: no-repeat;
   background-position: 16px 16px;
-
-  &:hover {
-    opacity: 0.3;
-  }
 }
 
+input[type="radio"]:checked {
+  &:hover {
+    background-color: #e5e5e5;
+  }
+}
 
 input[type="checkbox"]:checked + label::before {
   content: "";
@@ -28,7 +29,6 @@ input[type="checkbox"]:checked + label::before {
   background-repeat: no-repeat;
   background-position: 16px 16px;
 }
-
 
 .fieldset {
   border: none;

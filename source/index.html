@@ -67,10 +67,10 @@
   </svg>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--active">
               <a class="site-list__item site-list__item--link  site-list__item--active" href="#">Главная</a>
             </li>
             <li class="site-list__item">
@@ -84,18 +84,19 @@
             </li>
           </ul>
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
-            <svg class="main-nav__toggle-icon" width="23" height="21">
+            <!--<svg class="main-nav__toggle-icon" width="23" height="21">
               <use xlink:href="#toggle-icon"></use>
-            </svg></button>
+            </svg>--></button>
         </div>
+        <a class="main-nav__logo" href="">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="main-nav__logo-image" src="img/logotyle-mobile-svg.svg" alt="Логотип Sedona">
+            </picture>
+          </a>
       </nav>
-      <a class="page-header__logo" href="">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img class="page-header__logo-image" src="img/logotyle-mobile-svg.svg" alt="Логотип Sedona">
-        </picture>
-      </a>
+
       <div class="page-header__img-wrapper">
         <picture>
           <img class="page-header__text" src="img/text-sedona-index.svg" width="281" height="214" alt="">
@@ -206,6 +207,24 @@
       </div>
     </footer>
   </main>
+
+
+<script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>
 </body>
 
 </html>
