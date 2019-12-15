@@ -1,33 +1,66 @@
 input[type="radio"]:checked + label::before {
   content: "";
   top: -15px;
-  left: -65px;
+  left: -35px;
   position: absolute;
   width: 54px;
   height: 54px;
-  background-color: @light-grey;
-  background-image: url("../img/icon-circle.png");
-  background-repeat: no-repeat;
-  background-position: 16px 16px;
 }
 
-input[type="radio"]:checked {
-  &:hover {
-    background-color: #e5e5e5;
-  }
+input[type="radio"]:checked + label::after {
+  content: "";
+  top: 0;
+  left: -19px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: @black;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:hover::before {
+  background-color: @grey;
+}
+
+input[type="radio"]:checked + label:active::before {
+  background-color: @white-eight;
+}
+
+input[type="radio"]:checked + label:active::after {
+  background-color: @black-30;
 }
 
 input[type="checkbox"]:checked + label::before {
   content: "";
   top: -15px;
-  left: -95px;
+  left: -55px;
   position: absolute;
   width: 54px;
   height: 54px;
   background-color: @light-grey;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  top: 0;
+  left: -40px;
+  width: 22px;
+  height: 22px;
+  position: absolute;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
-  background-position: 16px 16px;
+}
+
+input[type="checkbox"]:checked + label:hover::before {
+  background-color: @grey;
+}
+
+input[type="checkbox"]:checked + label:active::before {
+  background-color: @white-eight;
+}
+
+input[type="checkbox"]:checked + label:active::after {
+  opacity: 0.3;
 }
 
 .fieldset {
@@ -47,6 +80,7 @@ input[type="checkbox"]:checked + label::before {
     width: 210px;
     min-height: 350px;
     margin: 0 auto;
+    padding: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -242,18 +276,20 @@ input[type="checkbox"]:checked + label::before {
 
 .fieldset__label {
   min-width: 36px;
-  height: 11px;
+  min-height: 17px;
   font-size: 14px;
   line-height: 1.86;
   color: @black;
 
   &--radio {
-    margin-left: 30px;
+    padding-left: 50px;
     margin-right: 0;
-    margin-bottom: 52px;
+    margin-bottom: 40px;
     display: inline-block;
     min-width: 177px;
+    min-height: 17px;
     position: relative;
+    text-align: left;
 
     &:hover::before {
       background-color: @grey;
@@ -261,34 +297,24 @@ input[type="checkbox"]:checked + label::before {
 
     &:active::before {
       background-color: #d5d5d5;
-      opacity: 0.3;
     }
 
     &::before {
       content: "";
       top: -15px;
-      left: -65px;
+      left: -35px;
       position: absolute;
       width: 54px;
       height: 54px;
       background-color: @light-grey;
       border-radius: 50%;
-
-      &:hover {
-        background-color: @grey;
-      }
-
-      &:active::before {
-        background-color: #d5d5d5;
-        opacity: 0.3;
-      }
     }
   }
 
   &--checkbox {
-    margin-left: 30px;
+    padding-left: 60px;
     margin-right: 0;
-    margin-bottom: 65px;
+    margin-bottom: 55px;
     display: inline-block;
     min-width: 110px;
     position: relative;
@@ -300,13 +326,12 @@ input[type="checkbox"]:checked + label::before {
 
     &:active::before {
       background-color: #d5d5d5;
-      opacity: 0.3;
     }
 
     &::before {
       content: "";
       top: -15px;
-      left: -95px;
+      left: -55px;
       display: inline-block;
       position: absolute;
       width: 54px;
@@ -355,7 +380,6 @@ input[type="checkbox"]:checked + label::before {
 
   @media (min-width: @tablet-width) {
     &--radio {
-      margin-left: 50px;
       min-width: 200px;
       width: 58px;
       font-size: 18px;
@@ -367,7 +391,8 @@ input[type="checkbox"]:checked + label::before {
     }
 
     &--checkbox {
-      margin-right: 100px;
+      padding-left: -10px;
+      margin-right: 70px;
       min-width: 120px;
     }
 
@@ -421,7 +446,8 @@ input[type="checkbox"]:checked + label::before {
 
   @media (min-width: @desktop-width) {
     &--checkbox {
-      margin-right: 70px;
+      padding-left: 40px;
+      margin-right: 60px;
       min-width: 120px;
 
       &:last-child {
