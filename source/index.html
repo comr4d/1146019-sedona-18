@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="fonts/PTSans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PTSansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <title>Sedona_vacation</title>
 </head>
@@ -152,22 +154,7 @@
       </div>
     </footer>
   </main>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>
