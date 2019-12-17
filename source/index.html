@@ -5,11 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
   <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
-=======
->>>>>>> 660305ae19f6f7454a04e858803f41f6439827a3
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <title>Sedona_vacation</title>
 </head>
@@ -116,7 +113,9 @@
         <p class="reservation__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
           гостиниц в седоне</p>
         <a class="reservation__button button link" href="#">Найти гостиницу</a>
-        <div class="reservation__map"></div>
+        <div class="reservation__map">
+        <div id="map"></div>
+        </div>
       </div>
     </section>
     <footer class="page-footer">
@@ -158,6 +157,9 @@
     </footer>
   </main>
   <script src="js/menu.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=c3c3c313-f9a0-494e-b533-3dffb9f3c05b&lang=ru_RU"
+  type="text/javascript"></script>
+  <script src="js/map.js"></script>
 </body>
 
 </html>
