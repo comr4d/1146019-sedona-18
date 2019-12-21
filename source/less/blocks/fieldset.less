@@ -1,7 +1,7 @@
 input[type="radio"]:checked + label::before {
   content: "";
-  top: -15px;
-  left: -35px;
+  top: 4px;
+  left: 0;
   position: absolute;
   width: 54px;
   height: 54px;
@@ -9,8 +9,8 @@ input[type="radio"]:checked + label::before {
 
 input[type="radio"]:checked + label::after {
   content: "";
-  top: 0;
-  left: -19px;
+  top: 20px;
+  left: 16px;
   position: absolute;
   width: 22px;
   height: 22px;
@@ -68,7 +68,7 @@ input[type="checkbox"]:checked + label:active::after {
 
   &--impression {
     box-sizing: border-box;
-    width: 210px;
+    width: 314px;
     min-height: 250px;
     margin: 0 auto;
     padding: 0;
@@ -146,7 +146,7 @@ input[type="checkbox"]:checked + label:active::after {
 
   &--radio {
     min-width: 235px;
-    margin-bottom: 47px;
+    margin-bottom: 30px;
   }
 
   &--attractions {
@@ -215,31 +215,32 @@ input[type="checkbox"]:checked + label:active::after {
         background-color: @grey;
       }
     }
+
+    &--emotions {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        left: 345px;
+        top: 12px;
+        background-color: @grey;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        right: 345px;
+        top: 12px;
+        background-color: @grey;
+      }
+    }
   }
 
-  &--emotions {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 2px;
-      left: 345px;
-      top: 12px;
-      background-color: @grey;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 2px;
-      right: 345px;
-      top: 12px;
-      background-color: @grey;
-    }
-  }
 
   @media (min-width: @desktop-width) {
     &--contacts {
@@ -282,12 +283,12 @@ input[type="checkbox"]:checked + label:active::after {
   color: @black;
 
   &--radio {
-    padding-left: 50px;
+    padding-left: 75px;
     margin-right: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: inline-block;
-    min-width: 177px;
-    min-height: 17px;
+    min-width: 265px;
+    line-height: 56px;
     position: relative;
     text-align: left;
 
@@ -301,8 +302,8 @@ input[type="checkbox"]:checked + label:active::after {
 
     &::before {
       content: "";
-      top: -15px;
-      left: -35px;
+      top: 4px;
+      left: 0;
       position: absolute;
       width: 54px;
       height: 54px;
@@ -532,7 +533,7 @@ input[type="checkbox"]:checked + label:active::after {
     background-color: @grey;
   }
 
-  &:active {
+  &:focus {
     border: solid 4px @grey;
     background-color: @white;
   }
@@ -598,7 +599,7 @@ input[type="checkbox"]:checked + label:active::after {
     background-color: @grey;
   }
 
-  &:active {
+  &:focus {
     border: solid 4px @grey;
     background-color: @white;
   }
