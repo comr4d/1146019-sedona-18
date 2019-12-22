@@ -12,9 +12,10 @@
 </head>
 
 <body class="page">
-  <div style="display:none">
-    <include src="build/img/sprite.svg"></include>
-  </div>
+
+    <object style="display:none" type="image/svg+xml" data="img/sprite.svg">
+    </object>
+
   <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -140,7 +141,7 @@
         <p class="reservation__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
           гостиниц в седоне</p>
         <a class="reservation__button button link" href="#">Найти гостиницу</a>
-        <div class="reservation__map"></div>
+        <div class="reservation__map"></div></div>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -151,7 +152,7 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter link" href="#" aria-label="Мы в twitter">
-                <svg class="social__icon social__icon--twitter" width="17" height="15">
+                <svg class="social__icon social__icon--twitter" width="17" height="15" viewBox="0 0 17.5 14.663" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
                 </svg></a>
             </li>
