@@ -12,10 +12,9 @@
 </head>
 
 <body class="page">
-
-    <object style="display:none" type="image/svg+xml" data="img/sprite.svg">
-    </object>
-
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -152,7 +151,7 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter link" href="#" aria-label="Мы в twitter">
-                <svg class="social__icon social__icon--twitter" width="17" height="15" viewBox="0 0 17.5 14.663" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="social__icon social__icon--twitter" width="17" height="15">
                   <use xlink:href="img/sprite.svg#icon-twitter"></use>
                 </svg></a>
             </li>

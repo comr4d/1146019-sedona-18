@@ -73,7 +73,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('pages', function() {
-  return gulp.src(['source/**/*.html'])
+  return gulp.src(['build/**/*.html'])
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
