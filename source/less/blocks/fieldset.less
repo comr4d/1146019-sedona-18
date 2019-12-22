@@ -66,6 +66,10 @@ input[type="checkbox"]:checked + label:active::after {
 .fieldset {
   border: none;
 
+  &--user-name {
+    display: flex;
+  }
+
   &--impression {
     box-sizing: border-box;
     width: 314px;
@@ -505,7 +509,7 @@ input[type="checkbox"]:checked + label:active::after {
 
 .fieldset__input {
   box-sizing: border-box;
-  min-width: 192px;
+
   height: 58px;
   font-size: 18px;
   font-weight: bold;
@@ -550,10 +554,6 @@ input[type="checkbox"]:checked + label:active::after {
 
     &--patronymic {
       width: 194px;
-    }
-
-    &--contacts {
-      width: 100%;
     }
   }
 
