@@ -1,4 +1,20 @@
-input[type="radio"]:checked + label::before {
+.fieldset__checkbox:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__checkbox:checked:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__radio:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__radio:checked:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__radio:checked + label::before {
   content: "";
   top: 4px;
   left: 0;
@@ -7,7 +23,7 @@ input[type="radio"]:checked + label::before {
   height: 54px;
 }
 
-input[type="radio"]:checked + label::after {
+.fieldset__radio:checked + label::after {
   content: "";
   top: 20px;
   left: 16px;
@@ -18,19 +34,19 @@ input[type="radio"]:checked + label::after {
   border-radius: 50%;
 }
 
-input[type="radio"]:checked + label:hover::before {
+.fieldset__radio:checked + label:hover::before {
   background-color: @grey;
 }
 
-input[type="radio"]:checked + label:active::before {
+.fieldset__radio:checked + label:active::before {
   background-color: @white-eight;
 }
 
-input[type="radio"]:checked + label:active::after {
+.fieldset__radio:checked + label:active::after {
   background-color: @black-30;
 }
 
-input[type="checkbox"]:checked + label::before {
+.fieldset__checkbox:checked + label::before {
   content: "";
   top: -15px;
   left: -55px;
@@ -40,7 +56,7 @@ input[type="checkbox"]:checked + label::before {
   background-color: @light-grey;
 }
 
-input[type="checkbox"]:checked + label::after {
+.fieldset__checkbox:checked + label::after {
   content: "";
   top: 0;
   left: -40px;
@@ -51,24 +67,20 @@ input[type="checkbox"]:checked + label::after {
   background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:checked + label:hover::before {
+.fieldset__checkbox:checked + label:hover::before {
   background-color: @grey;
 }
 
-input[type="checkbox"]:checked + label:active::before {
+.fieldset__checkbox:checked + label:active::before {
   background-color: @white-eight;
 }
 
-input[type="checkbox"]:checked + label:active::after {
+.fieldset__checkbox:checked + label:active::after {
   opacity: 0.3;
 }
 
 .fieldset {
   border: none;
-
-  &--user-name {
-    display: flex;
-  }
 
   &--impression {
     box-sizing: border-box;
@@ -509,17 +521,20 @@ input[type="checkbox"]:checked + label:active::after {
 
 .fieldset__input {
   box-sizing: border-box;
-
   height: 58px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
   color: @black-two;
   background-color: @light-grey;
-  padding: 25px;
   margin-bottom: 10px;
-  border: none;
   outline: none;
+  border: solid 4px @light-grey;
+  padding: 0 20px 0 20px;
+
+  &::placeholder {
+    color: @black-two;
+  }
 
   &--name {
     width: 230px;
@@ -535,6 +550,7 @@ input[type="checkbox"]:checked + label:active::after {
 
   &:hover {
     background-color: @grey;
+    border: solid 4px @grey;
   }
 
   &:focus {
@@ -592,10 +608,15 @@ input[type="checkbox"]:checked + label:active::after {
   color: @black-two;
   background-color: @light-grey;
   padding: 22px 30px 95px 21px;
-  border: none;
   outline: none;
+  border: solid 4px @light-grey;
+
+  &::placeholder {
+    color: @black-two;
+  }
 
   &:hover {
+    border: solid 4px @grey;
     background-color: @grey;
   }
 
@@ -610,9 +631,13 @@ input[type="checkbox"]:checked + label:active::after {
 }
 
 .fieldset__radio {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: -100000px;
 }
 
 .fieldset__checkbox {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: -100000px;
 }

@@ -17,14 +17,17 @@
   width: 318px;
   height: 389px;
   background: url("../img/bg-back-mobile@1x.jpg");
+  background-color: @faded-blue;
   background-position: -220px 0;
   background-repeat: no-repeat;
+  background-size: 768px 389px;
   margin: 22px auto;
   margin-top: 60px;
   position: relative;
 
   @media (min-resolution: @retina-dppx) {
     background: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 768px 389px;
   }
 
   &--photo {
@@ -33,6 +36,7 @@
     margin-bottom: 45px;
     background-position: -230px -220px;
     background-repeat: no-repeat;
+    background-size: 768px 389px;
   }
 
   &::after {
@@ -51,16 +55,21 @@
     height: 518px;
     background: url("../img/bg-back-tablet@1x.jpg");
     background-position: 0 0;
+    background-size: 768px 518px;
+    background-repeat: no-repeat;
     margin: 0 auto;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 768px 518px;
     }
 
     &--photo {
       height: 300px;
       margin-bottom: 45px;
-      background-position: 0 0;
+      background-position: 0 -200px;
+      background-size: 768px 518px;
+      background-repeat: no-repeat;
     }
 
     &::after {
@@ -76,16 +85,21 @@
     height: 518px;
     background: url("../img/bg-back-desktop@1x.jpg");
     background-position: 0 0;
+    background-size: 1200px 518px;
+    background-repeat: no-repeat;
     margin: 0 auto;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1200px 518px;
     }
 
     &--photo {
       height: 300px;
       margin-bottom: 45px;
-      background-position: 0 0;
+      background-position: 0 -200px;
+      background-size: 1200px 518px;
+      background-repeat: no-repeat;
     }
 
     &::after {
@@ -128,7 +142,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 380px;
+    left: 370px;
 
     &--photo {
       left: 380px;
