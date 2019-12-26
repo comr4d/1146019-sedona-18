@@ -1,6 +1,7 @@
 .advantages {
   width: 320px;
   margin: 0 auto;
+  margin-top: 27px;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
@@ -22,6 +23,7 @@
   list-style: none;
   padding: 0;
 
+
   @media (min-width: @tablet-width) {
     width: @tablet-width;
     display: flex;
@@ -39,9 +41,18 @@
   background-color: @light-grey-blue;
   position: relative;
 
+
+
   &--blue-back {
     color: @white;
+    padding-top: 44px;
+    padding-bottom: 38px;
+    display: block;
 
+    &:nth-child(even) {
+      padding-top: 21px;
+      padding-left: 18px;
+    }
     &::before {
       content: "";
       display: block;
@@ -54,11 +65,29 @@
       top: -15px;
       left: 0;
     }
+
+  &:nth-child(even)::before {
+    display: none;
+  }
+
   }
 
   &--grey-back {
     color: @black;
     background-color: @light-grey;
+    padding: 0;
+
+  }
+
+  &:nth-child(odd) {
+
+    &:before {
+
+    }
+    &::after {
+
+    }
+
   }
 
   @media (min-width: @tablet-width) {
@@ -95,21 +124,47 @@
   font-weight: bold;
   line-height: 1.44;
   color: inherit;
+  margin: 0;
+  padding-top: 18px;
+
+  &--grey-back {
+    padding-top: 30px;
+    min-width: 207px;
+  }
+
+  &--border {
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 0;
+    padding-top: 33px;
+    border-top: solid 1px @grey;
+  }
 
   @media (min-width: @tablet-width) {
     width: 151px;
     font-size: 21px;
     margin: 0 auto;
   }
+
   @media (min-width: @desktop-width) {
     line-height: 1.24;
   }
 }
 
 .advantages__description {
+
+  margin: 0;
+
+  &--grey-back {
+    width: 250px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+  }
+
   @media (min-width: @tablet-width) {
     min-width: 162px;
   }
+
   @media (min-width: @desktop-width) {
     width: 265px;
     margin: 0 auto;
@@ -117,9 +172,17 @@
 }
 
 .advantages__number {
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 17px;
+
+  &--grey-back {
+    padding-bottom: 15px;
+  }
+
   @media (min-width: @desktop-width) {
-  margin-top: 8px;
-  margin-bottom: 23px;
+    margin-top: 8px;
+    margin-bottom: 23px;
   }
 }
 
