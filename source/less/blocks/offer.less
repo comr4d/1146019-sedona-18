@@ -4,7 +4,7 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     margin-top: 40px;
-    margin-bottom: 66px;
+    margin-bottom: 63px;
   }
 }
 
@@ -18,9 +18,12 @@
   padding-left: 10px;
   box-sizing: border-box;
   margin-bottom: 35px;
+
   @media (min-width: @tablet-width) {
     width: 100%;
     display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -74,6 +77,7 @@
 
   &--souvenirs {
     margin-top: 28px;
+
     &::before {
       content: "";
       background-image: url("../img/icon-gift.svg");
@@ -90,6 +94,7 @@
 
   &--food {
     margin-top: 28px;
+
     &::before {
       content: "";
       background-image: url("../img/icon-burger.svg");
@@ -106,7 +111,10 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 120px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.24;
 
     &--housing {
       &::before {
@@ -114,8 +122,8 @@
         background-size: 75px 72px;
         width: 75px;
         height: 72px;
-        top: 10px;
-        left: 90px;
+        top: 20px;
+        left: 89px;
         fill: red;
       }
     }
@@ -126,8 +134,8 @@
         background-size: 64px 75px;
         width: 64px;
         height: 75px;
-        top: 10px;
-        left: 90px;
+        top: 18px;
+        left: 93px;
         fill: red;
       }
     }
@@ -138,8 +146,8 @@
         background-size: 77px 68px;
         width: 77px;
         height: 68px;
-        top: 10px;
-        left: 90px;
+        top: 23px;
+        left: 87px;
         fill: red;
       }
     }
@@ -181,7 +189,7 @@
     text-align: center;
     width: 165px;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 

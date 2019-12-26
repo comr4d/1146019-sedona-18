@@ -81,6 +81,19 @@
 
 .fieldset {
   border: none;
+  border-bottom: solid 1px @grey;
+  margin-bottom: 40px;
+
+  &--user-name {
+    box-sizing: border-box;
+    padding: 0 5px 6px 12px;
+    margin-bottom: 20px;
+  }
+
+  &--contacts {
+    padding-bottom: 18px;
+    margin-bottom: 18px
+  }
 
   &--impression {
     box-sizing: border-box;
@@ -159,6 +172,20 @@
 .fieldset__legend {
   font-weight: bold;
   font-size: 18px;
+  line-height: 1.44;
+  width: 240px;
+
+  &--user-name {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 21px;
+  }
+
+  &--contacts {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 13px;
+  }
 
   &--radio {
     min-width: 235px;
@@ -298,6 +325,15 @@
   line-height: 1.86;
   color: @black;
 
+  &--contacts {
+    display: inline-block;
+    margin-left: -90px;
+  }
+
+  &--tel {
+    margin-left: -75px;
+  }
+
   &--radio {
     padding-left: 75px;
     margin-right: 0;
@@ -364,7 +400,8 @@
     &::after {
       content: "";
       position: absolute;
-      right: -75px;
+      top: 34px;
+      right: -112px;
       display: block;
       width: 58px;
       height: 58px;
@@ -382,7 +419,8 @@
     &::after {
       content: "";
       position: absolute;
-      right: -67px;
+      top: 34px;
+      right: -97px;
       display: block;
       width: 58px;
       height: 58px;
@@ -527,7 +565,7 @@
   line-height: 1.44;
   color: @black-two;
   background-color: @light-grey;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   outline: none;
   border: solid 4px @light-grey;
   padding: 0 20px 0 20px;
@@ -536,7 +574,7 @@
     color: @black-two;
   }
 
-  &--name {
+  &--user-name {
     width: 230px;
   }
 
@@ -546,6 +584,11 @@
 
   &--patronymic {
     width: 194px;
+  }
+
+  &--contacts {
+    margin-top: 8px;
+    margin-bottom: 10px;
   }
 
   &:hover {
@@ -579,7 +622,7 @@
     height: 58px;
     font-size: 18px;
 
-    &--name {
+    &--user-name {
       width: 350px;
     }
 

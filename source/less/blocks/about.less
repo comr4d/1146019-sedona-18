@@ -1,14 +1,23 @@
 .about {
   width: 255px;
-  height: 149px;
   line-height: 1.44;
   color: @black;
-  margin: auto;
+  margin: 0 auto;
+
+  &--photo {
+    width: 100%;
+  }
+
+  &--comment {
+    width: 100%;
+    margin-bottom: 17px;
+    border-bottom: solid 1px @grey;
+  }
 
   @media (min-width: @tablet-width) {
     width: 490px;
     line-height: 1.86;
-    margin-top: 51px;
+    margin-top: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -27,8 +36,17 @@
   color: @black-three;
   margin-bottom: 30px;
 
+  &--photo {
+    margin-bottom: 25px;
+  }
+
+  &--comment {
+    margin-bottom: 28px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 100%;
+    line-height: 1.24;
     font-size: 21px;
     margin: 0 auto;
   }
@@ -44,9 +62,22 @@
   font-size: 14px;
   line-height: 1.86;
 
+  &--photo {
+    width: 275px;
+    margin: 0 auto;
+  }
+
+  &--comment {
+    width: 275px;
+    line-height: 1.71;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
   @media (min-width: @tablet-width) {
     min-width: 428px;
     margin: 0 auto;
+    margin-top: 29px;
   }
 
   @media (min-width: @desktop-width) {
