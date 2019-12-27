@@ -1,49 +1,75 @@
-input[type="radio"]:checked + label::before {
+.fieldset__checkbox:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__checkbox:checked:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__radio:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__radio:checked:focus + label::before {
+  background-color: @grey;
+}
+
+.fieldset__radio:checked + label::before {
   content: "";
-  top: 4px;
-  left: 0;
+  top: 0;
+  left: -8px;
   position: absolute;
   width: 54px;
   height: 54px;
+
+  @media (min-width: @tablet-width) {
+    top: -15px;
+    left: -7px;
+  }
 }
 
-input[type="radio"]:checked + label::after {
+.fieldset__radio:checked + label::after {
   content: "";
-  top: 20px;
-  left: 16px;
+  top: 16px;
+  left: 8px;
   position: absolute;
   width: 22px;
   height: 22px;
   background-color: @black;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 1px;
+    left: 9px;
+  }
 }
 
-input[type="radio"]:checked + label:hover::before {
+.fieldset__radio:checked + label:hover::before {
   background-color: @grey;
 }
 
-input[type="radio"]:checked + label:active::before {
+.fieldset__radio:checked + label:active::before {
   background-color: @white-eight;
 }
 
-input[type="radio"]:checked + label:active::after {
+.fieldset__radio:checked + label:active::after {
   background-color: @black-30;
 }
 
-input[type="checkbox"]:checked + label::before {
+.fieldset__checkbox:checked + label::before {
   content: "";
-  top: -15px;
-  left: -55px;
+  top: -12px;
+  left: -48px;
   position: absolute;
   width: 54px;
   height: 54px;
   background-color: @light-grey;
 }
 
-input[type="checkbox"]:checked + label::after {
+.fieldset__checkbox:checked + label::after {
   content: "";
-  top: 0;
-  left: -40px;
+  top: 6px;
+  left: -30px;
   width: 22px;
   height: 22px;
   position: absolute;
@@ -51,23 +77,32 @@ input[type="checkbox"]:checked + label::after {
   background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:checked + label:hover::before {
+.fieldset__checkbox:checked + label:hover::before {
   background-color: @grey;
 }
 
-input[type="checkbox"]:checked + label:active::before {
+.fieldset__checkbox:checked + label:active::before {
   background-color: @white-eight;
 }
 
-input[type="checkbox"]:checked + label:active::after {
+.fieldset__checkbox:checked + label:active::after {
   opacity: 0.3;
 }
 
 .fieldset {
   border: none;
+  border-bottom: solid 1px @grey;
+  margin-bottom: 40px;
 
   &--user-name {
-    display: flex;
+    box-sizing: border-box;
+    padding: 0 5px 6px 12px;
+    margin-bottom: 20px;
+  }
+
+  &--contacts {
+    padding-bottom: 18px;
+    margin-bottom: 18px;
   }
 
   &--impression {
@@ -75,16 +110,24 @@ input[type="checkbox"]:checked + label:active::after {
     width: 314px;
     min-height: 250px;
     margin: 0 auto;
-    padding: 0;
+    margin-bottom: 18px;
+    padding: 0 0 14px 0;
     position: relative;
   }
 
   &--attractions {
     box-sizing: border-box;
-    width: 210px;
+    width: 314px;
     min-height: 350px;
     margin: 0 auto;
     padding: 0;
+    margin-bottom: 18px;
+  }
+
+  &--emotions {
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: none;
   }
 
   @media (min-width: @tablet-width) {
@@ -92,20 +135,24 @@ input[type="checkbox"]:checked + label:active::after {
     width: 324px;
     padding: 0;
     margin: 0;
-    margin-bottom: 75px;
+    border-bottom: none;
 
     &--user-name {
+      height: 292px;
       box-sizing: border-box;
       order: 1;
-      padding-left: 40px;
+      padding-left: 47px;
+      margin-bottom: 75px;
     }
 
     &--contacts {
       width: 100%;
       order: 1;
+      margin-bottom: 35px;
     }
 
     &--impression {
+      height: 292px;
       order: 0;
       border-right: 1px solid @grey;
       box-sizing: border-box;
@@ -115,9 +162,9 @@ input[type="checkbox"]:checked + label:active::after {
     &--attractions {
       width: 100%;
       order: 1;
-      padding-left: 120px;
+      padding-left: 140px;
       min-height: 150px;
-      margin-bottom: 65px;
+      margin-bottom: 20px;
     }
 
     &--emotions {
@@ -129,13 +176,22 @@ input[type="checkbox"]:checked + label:active::after {
   @media (min-width: @desktop-width) {
     width: 480px;
 
+    &--user-name {
+      padding-left: 70px;
+    }
+
     &--contacts {
       width: 100%;
     }
 
+    &--impression {
+      padding-right: 120px;
+    }
+
+
     &--attractions {
       width: 100%;
-      padding-left: 100px;
+      padding-left: 0;
     }
 
     &--emotions {
@@ -147,15 +203,36 @@ input[type="checkbox"]:checked + label:active::after {
 .fieldset__legend {
   font-weight: bold;
   font-size: 18px;
+  line-height: 1.44;
+  width: 240px;
+
+  &--user-name {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 21px;
+  }
+
+  &--contacts {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 13px;
+  }
 
   &--radio {
     min-width: 235px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &--attractions {
     min-width: 235px;
-    margin-bottom: 47px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+
+  &--emotions {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 18px;
   }
 
   @media (min-width: @tablet-width) {
@@ -164,82 +241,91 @@ input[type="checkbox"]:checked + label:active::after {
     font-weight: bold;
     line-height: 1.24;
     color: @black-two;
-    margin-bottom: 40px;
+
+    &--user-name {
+      margin-bottom: 53px;
+    }
 
     &--radio {
-      min-width: 235px;
+      min-width: 273px;
+      margin: 0 auto;
+      margin-bottom: 70px;
     }
 
     &--attractions {
       width: 278px;
-      margin-bottom: 47px;
+      margin-bottom: 55px;
       position: relative;
 
       &::after {
         content: "";
         position: absolute;
-        width: 120px;
+        width: 125px;
         height: 2px;
-        left: 360px;
-        top: 12px;
+        left: 340px;
+        top: 24px;
         background-color: @grey;
       }
 
       &::before {
         content: "";
         position: absolute;
-        width: 120px;
+        width: 125px;
         height: 2px;
-        right: 360px;
-        top: 12px;
+        right: 340px;
+        top: 24px;
         background-color: @grey;
       }
     }
 
     &--contacts {
       position: relative;
+      width: 279px;
+      margin-bottom: 20px;
 
       &::after {
         content: "";
         position: absolute;
-        width: 120px;
+        width: 125px;
         height: 2px;
-        left: 360px;
-        top: 12px;
+        left: 340px;
+        top: 9px;
         background-color: @grey;
       }
 
       &::before {
         content: "";
         position: absolute;
-        width: 120px;
+        width: 125px;
         height: 2px;
-        right: 360px;
-        top: 12px;
+        right: 340px;
+        top: 9px;
         background-color: @grey;
       }
     }
 
     &--emotions {
       position: relative;
+      width: 270px;
+      margin-bottom: 56px;
 
       &::after {
         content: "";
         position: absolute;
-        width: 120px;
+        width: 125px;
         height: 2px;
-        left: 345px;
-        top: 12px;
+        left: 340px;
+        top: 11px;
         background-color: @grey;
       }
 
       &::before {
         content: "";
         position: absolute;
-        width: 120px;
+        width: 125px;
         height: 2px;
-        right: 345px;
-        top: 12px;
+        right: 340px;
+        top: 11px;
         background-color: @grey;
       }
     }
@@ -247,33 +333,45 @@ input[type="checkbox"]:checked + label:active::after {
 
 
   @media (min-width: @desktop-width) {
+    &--user-name {
+      text-align: left;
+      margin-left: 10px;
+    }
+
+    &--radio {
+      text-align: left;
+      margin-left: 80px;
+    }
+
     &--contacts {
+      margin-bottom: 65px;
+
       &::after {
-        width: 210px;
+        width: 280px;
       }
 
       &::before {
-        width: 210px;
+        width: 280px;
       }
     }
 
     &--attractions {
       &::after {
-        width: 210px;
+        width: 280px;
       }
 
       &::before {
-        width: 210px;
+        width: 280px;
       }
     }
 
     &--emotions {
       &::after {
-        width: 210px;
+        width: 280px;
       }
 
       &::before {
-        width: 210px;
+        width: 280px;
       }
     }
   }
@@ -286,13 +384,21 @@ input[type="checkbox"]:checked + label:active::after {
   line-height: 1.86;
   color: @black;
 
-  &--radio {
-    padding-left: 75px;
-    margin-right: 0;
-    margin-bottom: 20px;
+  &--contacts {
     display: inline-block;
-    min-width: 265px;
-    line-height: 56px;
+    margin-left: -90px;
+  }
+
+  &--radio {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    text-transform: none;
+    padding-left: 70px;
+    margin-right: 0;
+    margin-bottom: 13px;
+    display: inline-block;
+    min-width: 185px;
     position: relative;
     text-align: left;
 
@@ -306,8 +412,8 @@ input[type="checkbox"]:checked + label:active::after {
 
     &::before {
       content: "";
-      top: 4px;
-      left: 0;
+      top: 0;
+      left: -8px;
       position: absolute;
       width: 54px;
       height: 54px;
@@ -317,13 +423,22 @@ input[type="checkbox"]:checked + label:active::after {
   }
 
   &--checkbox {
-    padding-left: 60px;
-    margin-right: 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.44;
+    text-transform: none;
+    padding-left: 30px;
+    padding-right: auto;
+    margin-right: 30px;
     margin-bottom: 55px;
     display: inline-block;
-    min-width: 110px;
+    min-width: 120px;
     position: relative;
     text-align: left;
+
+    &:last-child {
+      margin-bottom: 43px;
+    }
 
     &:hover::before {
       background-color: @grey;
@@ -335,8 +450,8 @@ input[type="checkbox"]:checked + label:active::after {
 
     &::before {
       content: "";
-      top: -15px;
-      left: -55px;
+      top: -12px;
+      left: -48px;
       display: inline-block;
       position: absolute;
       width: 54px;
@@ -352,7 +467,8 @@ input[type="checkbox"]:checked + label:active::after {
     &::after {
       content: "";
       position: absolute;
-      right: -75px;
+      top: 34px;
+      right: -112px;
       display: block;
       width: 58px;
       height: 58px;
@@ -366,11 +482,13 @@ input[type="checkbox"]:checked + label:active::after {
 
   &--tel {
     position: relative;
+    margin-left: -75px;
 
     &::after {
       content: "";
       position: absolute;
-      right: -67px;
+      top: 34px;
+      right: -97px;
       display: block;
       width: 58px;
       height: 58px;
@@ -383,7 +501,33 @@ input[type="checkbox"]:checked + label:active::after {
   }
 
 
+  &--tel-desktop {
+    display: none;
+  }
+
+
   @media (min-width: @tablet-width) {
+    &--user-name {
+      margin-right: 15px;
+    }
+
+    &--surname {
+      margin-right: 15px;
+    }
+
+    &--patronymic {
+      margin-right: 15px;
+    }
+
+    &--contacts {
+      width: 162px;
+      margin-left: 20px;
+      margin-bottom: 0;
+      display: block;
+      text-align: left;
+      position: relative;
+    }
+
     &--radio {
       min-width: 200px;
       width: 58px;
@@ -392,21 +536,30 @@ input[type="checkbox"]:checked + label:active::after {
       line-height: 1.44;
       text-align: left;
       color: @black-two;
-      text-transform: capitalize;
+      text-transform: none;
+      margin-bottom: 55px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        top: -15px;
+        left: -7px;
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        background-color: @light-grey;
+        border-radius: 50%;
+      }
     }
 
     &--checkbox {
       padding-left: -10px;
-      margin-right: 70px;
+      margin-right: 90px;
+      margin-bottom: 65px;
       min-width: 120px;
-    }
-
-    &--contacts {
-      display: block;
-      min-width: 162px;
-      text-align: left;
-      margin-bottom: 20px;
-      position: relative;
     }
 
     &--email {
@@ -415,8 +568,8 @@ input[type="checkbox"]:checked + label:active::after {
       &::after {
         content: "";
         position: absolute;
-        right: 0;
-        top: 31px;
+        right: -470px;
+        top: 34px;
         display: block;
         width: 58px;
         height: 58px;
@@ -434,8 +587,8 @@ input[type="checkbox"]:checked + label:active::after {
       &::after {
         content: "";
         position: absolute;
-        right: 0;
-        top: 31px;
+        right: -470px;
+        top: 34px;
         display: block;
         width: 58px;
         height: 58px;
@@ -451,8 +604,8 @@ input[type="checkbox"]:checked + label:active::after {
 
   @media (min-width: @desktop-width) {
     &--checkbox {
-      padding-left: 40px;
-      margin-right: 60px;
+      padding-left: 20px;
+      margin-right: 100px;
       min-width: 120px;
 
       &:last-child {
@@ -472,7 +625,7 @@ input[type="checkbox"]:checked + label:active::after {
       &::after {
         content: "";
         position: absolute;
-        right: -260px;
+        right: -318px;
         top: -17px;
         display: block;
         width: 58px;
@@ -486,12 +639,24 @@ input[type="checkbox"]:checked + label:active::after {
     }
 
     &--tel {
+      display: none;
+    }
+
+    &--tel-desktop {
+      min-width: 36px;
+      min-height: 17px;
+      font-size: 14px;
+      line-height: 1.86;
+      color: @black;
+      display: inline-block;
+      margin-left: -190px;
+      margin-right: 20px;
       position: relative;
 
       &::after {
         content: "";
         position: absolute;
-        right: -260px;
+        right: -338px;
         display: block;
         top: -17px;
         width: 58px;
@@ -509,19 +674,22 @@ input[type="checkbox"]:checked + label:active::after {
 
 .fieldset__input {
   box-sizing: border-box;
-
   height: 58px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.44;
   color: @black-two;
   background-color: @light-grey;
-  padding: 25px;
-  margin-bottom: 10px;
-  border: none;
+  margin-bottom: 20px;
   outline: none;
+  border: solid 4px @light-grey;
+  padding: 0 10px 0 20px;
 
-  &--name {
+  &::placeholder {
+    color: @black-two;
+  }
+
+  &--user-name {
     width: 230px;
   }
 
@@ -533,8 +701,14 @@ input[type="checkbox"]:checked + label:active::after {
     width: 194px;
   }
 
+  &--contacts {
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+
   &:hover {
     background-color: @grey;
+    border: solid 4px @grey;
   }
 
   &:focus {
@@ -544,26 +718,33 @@ input[type="checkbox"]:checked + label:active::after {
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
-    min-width: 192px;
     height: 58px;
     font-size: 18px;
 
+    &--user-name {
+      width: 216px;
+    }
+
     &--surname {
-      width: 192px;
+      width: 178px;
     }
 
     &--patronymic {
-      width: 194px;
+      width: 180px;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
-    min-width: 192px;
     height: 58px;
     font-size: 18px;
 
-    &--name {
+    &--user-name {
       width: 350px;
     }
 
@@ -578,6 +759,12 @@ input[type="checkbox"]:checked + label:active::after {
     &--contacts {
       display: inline-block;
       width: 257px;
+      margin-right: 90px;
+
+
+      &:last-child {
+        margin-right: -140px;
+      }
     }
   }
 }
@@ -591,11 +778,18 @@ input[type="checkbox"]:checked + label:active::after {
   line-height: 1.44;
   color: @black-two;
   background-color: @light-grey;
-  padding: 22px 30px 95px 21px;
-  border: none;
+  padding: 12px 0 95px 12px;
   outline: none;
+  border: solid 4px @light-grey;
+  text-align: left;
+  margin-bottom: 47px;
+
+  &::placeholder {
+    color: @black-two;
+  }
 
   &:hover {
+    border: solid 4px @grey;
     background-color: @grey;
   }
 
@@ -606,13 +800,18 @@ input[type="checkbox"]:checked + label:active::after {
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    margin-bottom: 55px;
   }
 }
 
 .fieldset__radio {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: -100000px;
 }
 
 .fieldset__checkbox {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: -100000px;
 }

@@ -17,22 +17,26 @@
   width: 318px;
   height: 389px;
   background: url("../img/bg-back-mobile@1x.jpg");
-  background-position: -220px 0;
+  background-color: @faded-blue;
+  background-position: -226px 0;
   background-repeat: no-repeat;
-  margin: 22px auto;
-  margin-top: 60px;
+  background-size: 768px 389px;
+  margin: 27px auto;
+  margin-top: 56px;
   position: relative;
 
   @media (min-resolution: @retina-dppx) {
     background: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 768px 389px;
   }
 
   &--photo {
     position: relative;
     height: 158px;
-    margin-bottom: 45px;
+    margin-bottom: 24px;
     background-position: -230px -220px;
     background-repeat: no-repeat;
+    background-size: 768px 389px;
   }
 
   &::after {
@@ -51,16 +55,21 @@
     height: 518px;
     background: url("../img/bg-back-tablet@1x.jpg");
     background-position: 0 0;
+    background-size: 768px 518px;
+    background-repeat: no-repeat;
     margin: 0 auto;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 768px 518px;
     }
 
     &--photo {
-      height: 300px;
+      height: 290px;
       margin-bottom: 45px;
-      background-position: 0 0;
+      background-position: 0 -200px;
+      background-size: 768px 518px;
+      background-repeat: no-repeat;
     }
 
     &::after {
@@ -76,16 +85,21 @@
     height: 518px;
     background: url("../img/bg-back-desktop@1x.jpg");
     background-position: 0 0;
+    background-size: 1200px 518px;
+    background-repeat: no-repeat;
     margin: 0 auto;
 
     @media (min-resolution: @retina-dppx) {
       background: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1200px 518px;
     }
 
     &--photo {
       height: 300px;
       margin-bottom: 45px;
-      background-position: 0 0;
+      background-position: 0 -200px;
+      background-size: 1200px 518px;
+      background-repeat: no-repeat;
     }
 
     &::after {
@@ -100,7 +114,7 @@
 .page-header__text {
   position: absolute;
   top: 90px;
-  left: 20px;
+  left: 18px;
   width: 281px;
   height: 214px;
   object-fit: contain;
@@ -120,18 +134,19 @@
     height: 350px;
 
     &--photo {
-      bottom: 116px;
-      left: 152px;
+      top: 94px;
+      left: 155px;
       width: 460px;
       height: 80px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    left: 380px;
+    left: 370px;
 
     &--photo {
-      left: 380px;
+      top: 100px;
+      left: 365px;
     }
   }
 }
