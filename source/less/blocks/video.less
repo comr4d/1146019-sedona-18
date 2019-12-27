@@ -1,5 +1,9 @@
 .video {
   margin-bottom: 142px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 85px;
+  }
 }
 
 .video__wrapper {
@@ -32,7 +36,7 @@
 
   @media (min-width: @tablet-width) {
     width: 415px;
-    margin-bottom: 68px;
+    margin-bottom: 77px;
   }
 }
 
@@ -114,8 +118,8 @@
 
     &::before {
       top: 45px;
-      width: 389px;
-      left: 80px;
+      width: 395px;
+      left: 92px;
       opacity: 0.6;
     }
 
@@ -123,7 +127,7 @@
       width: 10px;
       height: 10px;
       top: 42px;
-      left: 180px;
+      left: 208px;
     }
   }
 
@@ -185,7 +189,8 @@
     bottom: 20px;
 
     &--replay {
-      left: 25px;
+      top: -16px;
+      left: 35px;
       width: 16px;
 
       &:hover {
@@ -199,6 +204,7 @@
     }
 
     &--fullscreen {
+      top: -16px;
       width: 32px;
       left: 587px;
 
@@ -213,6 +219,7 @@
     }
 
     &--subtitles {
+      top: -16px;
       width: 32px;
       left: 524px;
 

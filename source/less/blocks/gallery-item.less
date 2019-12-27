@@ -1,6 +1,7 @@
 .gallery__list {
   margin-top: 24px;
   margin-bottom: 32px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -9,7 +10,7 @@
 }
 
 .gallery-item {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding: 20px;
   padding-bottom: 16px;
   position: relative;
@@ -126,14 +127,16 @@
     box-sizing: border-box;
     width: 100%;
     text-transform: capitalize;
-    padding: 15px 0 27px 20px;
+    padding: 16px 0 27px 22px;
     margin: 0 auto;
     position: relative;
   }
 
   @media (min-width: @desktop-width) {
+    height: 80px;
     position: absolute;
     bottom: 0;
+    padding: 17px 0 27px 20px;
     box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
     color: @white;
     background-color: @black-30;
@@ -178,13 +181,15 @@
     position: absolute;
     min-width: 15px;
     right: 20px;
-    bottom: 50px;
+    bottom: 49px;
     display: inline-block;
     margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     color: @white;
+    right: 24px;
+    bottom: 38px;
 
     &::before {
       fill: @white;
@@ -200,7 +205,8 @@
   left: -36px;
 
   @media (min-width: @tablet-width) {
-    left: -30px;
+    top: 1px;
+    left: -31px;
   }
 
   @media (min-width: @desktop-width) {

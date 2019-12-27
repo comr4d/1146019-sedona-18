@@ -63,10 +63,10 @@
             <label class="fieldset__label fieldset__label--user-name" for="name">Имя*:</label>
             <input class="fieldset__input fieldset__input--user-name" type="text" name="name" id="name" placeholder="Петр"
               required="">
-            <label class="fieldset__label" for="surname">Фамилия*:</label>
+            <label class="fieldset__label fieldset__label--surname" for="surname">Фамилия*:</label>
             <input class="fieldset__input fieldset__input--surname" type="text" name="surname" id="surname"
               placeholder="Иванов" required="">
-            <label class="fieldset__label" for="patronymic">Отчество*:</label>
+            <label class="fieldset__label fieldset__label--patronymic" for="patronymic">Отчество*:</label>
             <input class="fieldset__input fieldset__input--patronymic" type="text" name="patronymic" id="patronymic"
               placeholder="Александрович" required="">
           </fieldset>
@@ -74,6 +74,8 @@
             <legend class="fieldset__legend fieldset__legend--contacts">Контактная информация:</legend>
             <label class="fieldset__label fieldset__label--contacts fieldset__label--tel" for="tel">Контактный
               телефон*:</label>
+              <label class="fieldset__label--tel-desktop" for="tel">
+                телефон*:</label>
             <input class="fieldset__input fieldset__input--contacts" type="tel" name="tel" id="tel"
               placeholder="Введите телефон" required="">
             <label class="fieldset__label fieldset__label--contacts fieldset__label--email" for="e-mail">Электронная

@@ -18,6 +18,17 @@
     width: 490px;
     line-height: 1.86;
     margin-top: 50px;
+
+    &--photo {
+      margin-top: 30px;
+      margin-bottom: 65px;
+    }
+
+    &--comment {
+      margin-top: 28px;
+      border-bottom: none;
+      margin-bottom: 60px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -26,6 +37,17 @@
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 55px;
+
+    &--photo {
+      margin-top: 64px;
+      margin-bottom: 78px;
+    }
+
+    &--comment {
+      margin-top: 60px;
+      border-bottom: none;
+      margin-bottom: 70px;
+    }
   }
 }
 
@@ -49,12 +71,29 @@
     line-height: 1.24;
     font-size: 21px;
     margin: 0 auto;
+
+    &--photo {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 0.87;
+    }
+
+    &--comment {
+      margin-bottom: 28px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 0.87;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 490px;
     margin-bottom: 26px;
     line-height: 1.24;
+
+    &--photo {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -81,6 +120,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 490px;
+    width: 500px;
+
+    &--photo {
+      width: 430px;
+      margin-top: 23px;
+    }
   }
 }

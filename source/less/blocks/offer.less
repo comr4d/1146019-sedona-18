@@ -6,6 +6,10 @@
     margin-top: 40px;
     margin-bottom: 63px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .offer__list {
@@ -31,8 +35,6 @@
   position: relative;
   box-sizing: border-box;
 
-
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
@@ -41,7 +43,6 @@
     &:nth-child(2) {
       order: 1;
     }
-
   }
 
   @media (min-width: @desktop-width) {
@@ -190,6 +191,22 @@
     width: 165px;
     margin: 0 auto;
     margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+
+    &--housing {
+      width: 300px;
+    }
+
+    &--food {
+      width: 320px;
+    }
+
+    &--souvenirs {
+      width: 220px;
+    }
   }
 }
 
