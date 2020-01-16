@@ -5,7 +5,7 @@
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
-    margin-top: 48px;
+    margin-top: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,6 +23,8 @@
   color: @white;
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 
 
   @media (min-width: @tablet-width) {
@@ -79,6 +81,10 @@
     height: 256px;
 
     &--blue-back {
+      padding-top: 4px;
+      padding-left: 20px;
+      display: block;
+
       &::before {
         display: none;
       }
@@ -99,6 +105,10 @@
       padding-left: 18px;
       display: block;
     }
+
+    &--grey-back {
+      padding-top: 0;
+    }
   }
 }
 
@@ -110,25 +120,55 @@
   margin: 0;
   padding-top: 18px;
 
+  &--city {
+    padding-top: 42px;
+  }
+
   &--grey-back {
-    padding-top: 30px;
+    padding-top: 28px;
   }
 
   &--border {
-    width: 280px;
-    margin: 0 auto;
-    margin-top: 0;
-    padding-top: 33px;
-    border-top: solid 1px @grey;
+    padding-top: 30px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 280px;
+      height: 1px;
+      background-color: @dark-grey;
+      position: absolute;
+      top: 0;
+      left: 20px;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 280px;
+      height: 1px;
+      background-color: @dark-grey;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    width: 151px;
+    width: 150px;
     font-size: 21px;
     margin: 0 auto;
+    font-weight: bold;
+    line-height: 1.24;
+
+    &--blue-back {
+      font-weight: bold;
+      line-height: 1.24;
+      padding-top: 42px;
+    }
 
     &--grey-back {
-      padding-top: 40px;
+      padding-top: 45px;
       width: 132px;
     }
 
@@ -140,25 +180,49 @@
   @media (min-width: @desktop-width) {
     line-height: 1.24;
     width: 150px;
+
+    &--blue-back {
+      padding-top: 18px;
+    }
   }
 }
 
 .advantages__description {
-
   margin: 0;
+
+  &--blue-back {
+    padding-bottom: 19px;
+  }
 
   &--grey-back {
     width: 250px;
     margin: 0 auto;
     padding-bottom: 24px;
+
+    &:last-child {
+      padding-bottom: 27px;
+    }
   }
+
 
   @media (min-width: @tablet-width) {
     padding-left: 10px;
     padding-right: 10px;
 
+    &--blue-back {
+      width: 162px;
+      margin: 0 auto;
+      padding-top: 5px;
+      line-height: 1.5;
+    }
+
     &--grey-back {
       width: 160px;
+      line-height: 1.5;
+    }
+
+    &--border {
+      width: 145px;
     }
   }
 
@@ -166,10 +230,21 @@
     width: 265px;
     margin: 0 auto;
 
+    &--blue-back {
+      padding-top: 0;
+      line-height: 1.5;
+    }
+
+    &--bridge {
+      width: 216px;
+    }
+
     &--grey-back {
-      &:nth-child(3) {
-        width: 290px;
-      }
+      width: 290px;
+    }
+
+    &--border {
+      width: 260px;
     }
   }
 }
@@ -180,18 +255,23 @@
   padding-bottom: 17px;
 
   &--grey-back {
+    padding-top: 9px;
     padding-bottom: 15px;
   }
 
   @media (min-width: @tablet-width) {
     &--grey-back {
-      padding-bottom: 20px;
+      padding-bottom: 22px;
     }
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 2px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
+
+    &--grey-back {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -221,6 +301,6 @@
   @media (min-width: @desktop-width) {
     width: 800px;
     position: absolute;
-    top: -27%;
+    top: -76px;
   }
 }

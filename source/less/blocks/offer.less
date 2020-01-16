@@ -4,7 +4,7 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     margin-top: 40px;
-    margin-bottom: 63px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,14 +70,14 @@
       background-size: 37px 36px;
       width: 37px;
       height: 36px;
-      top: 27px;
-      left: 11px;
+      top: 26px;
+      left: 12px;
       fill: red;
     }
   }
 
   &--souvenirs {
-    margin-top: 28px;
+    margin-top: 27px;
 
     &::before {
       content: "";
@@ -87,8 +87,8 @@
       background-size: 32px 38px;
       width: 32px;
       height: 38px;
-      top: 17px;
-      left: 14px;
+      top: 16px;
+      left: 15px;
       fill: red;
     }
   }
@@ -104,8 +104,8 @@
       background-size: 40px 35px;
       width: 40px;
       height: 35px;
-      top: 21px;
-      left: 7px;
+      top: 22px;
+      left: 8px;
       fill: red;
     }
   }
@@ -186,26 +186,44 @@
   margin-top: 16px;
   margin-bottom: 0;
 
+  &--first-line {
+    width: 165px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
   @media (min-width: @tablet-width) {
     text-align: center;
     width: 165px;
     margin: 0 auto;
     margin-top: 20px;
+
+    &--food {
+      width: 155px;
+    }
+
+    &--first-line {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 280px;
-
     &--housing {
-      width: 300px;
+      width: 285px;
     }
 
     &--food {
-      width: 320px;
+      width: 300px;
     }
 
     &--souvenirs {
       width: 220px;
+    }
+
+    &--first-line {
+      margin-top: 0;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 }
