@@ -64,17 +64,37 @@
   width: 54px;
   height: 54px;
   background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    top: -13px;
+    left: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -13px;
+    left: -58px;
+  }
 }
 
 .fieldset__checkbox:checked + .fieldset__label--checkbox::after {
   content: "";
-  top: 6px;
+  top: 7px;
   left: 34px;
   width: 22px;
   height: 22px;
   position: absolute;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 6px;
+    left: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 6px;
+    left: -40px;
+  }
 }
 
 .fieldset__checkbox:checked + .fieldset__label--checkbox:hover::before {
@@ -159,7 +179,7 @@
       height: 292px;
       border-right: 1px solid @grey;
       box-sizing: border-box;
-      padding-right: 0px;
+      padding-right: 0;
     }
 
     &--attractions {
@@ -180,11 +200,13 @@
     width: 480px;
 
     &--user-name {
-      padding-left: 70px;
+      padding-left: 65px;
     }
 
     &--contacts {
       width: 100%;
+      box-sizing: border-box;
+      padding-left: 10px;
     }
 
     &--impression {
@@ -255,7 +277,7 @@
 
     &--radio {
       width: 100%;
-      margin-left: 0px;
+      margin-left: 0;
       margin-bottom: 72px;
       padding: 0;
       text-align: left;
@@ -344,12 +366,13 @@
   @media (min-width: @desktop-width) {
     &--user-name {
       text-align: left;
-      margin-left: 10px;
+      margin-left: 14px;
     }
 
     &--radio {
       text-align: left;
       margin-left: 80px;
+      margin-bottom: 73px;
     }
 
     &--contacts {
@@ -365,6 +388,8 @@
     }
 
     &--attractions {
+      margin-bottom: 57px;
+
       &::after {
         width: 280px;
       }
@@ -587,19 +612,15 @@
 
     &--checkbox {
       display: inline-block;
-      padding-left: 85px;
-      margin-left: 0px;
-      margin-right: 80px;
+      padding-left: 80px;
+      margin-left: 0;
       margin-bottom: 65px;
-      width: 125px;
-      &:nth-child(odd) {
-        margin-right: 40px;
-      }
+      margin-right: 50px;
 
       &::before {
         content: "";
-        top: -14px;
-        left: 10px;
+        top: -13px;
+        left: 7px;
       }
     }
 
@@ -644,14 +665,43 @@
 
 
   @media (min-width: @desktop-width) {
+    &--surname {
+      margin-right: 9px;
+      margin-left: 13px;
+    }
+
     &--checkbox {
       padding-left: 20px;
-      margin-right: 100px;
+      margin-right: 90px;
       min-width: 120px;
 
-      &:last-child {
+      &:nth-of-type(1) {
+        margin-left: 55px;
+      }
+
+      &:nth-of-type(2) {
+        margin-left: 20px;
+        margin-right: 90px;
+      }
+
+      &:nth-of-type(3) {
+        margin-left: 23px;
+        margin-right: 100px;
+      }
+
+      &:nth-of-type(4) {
         margin-right: 0;
       }
+
+      &::before {
+        content: "";
+        top: -13px;
+        left: -58px;
+      }
+    }
+
+    &--radio {
+      padding-left: 77px;
     }
 
     &--contacts {
@@ -662,12 +712,14 @@
 
     &--email {
       position: relative;
+      margin-left: 0;
+      margin-right: 15px;
 
       &::after {
         content: "";
         position: absolute;
-        right: -318px;
-        top: -17px;
+        right: -334px;
+        top: -18px;
         display: block;
         width: 58px;
         height: 58px;
@@ -684,22 +736,22 @@
     }
 
     &--tel-desktop {
-      min-width: 36px;
+      width: 70px;
       min-height: 17px;
       font-size: 14px;
       line-height: 1.86;
       color: @black;
       display: inline-block;
-      margin-left: -190px;
-      margin-right: 20px;
+      margin-left: -13px;
+      margin-right: 11px;
       position: relative;
 
       &::after {
         content: "";
         position: absolute;
-        right: -338px;
+        right: -330px;
         display: block;
-        top: -17px;
+        top: -18px;
         width: 58px;
         height: 58px;
         background-size: 18px 18px;
@@ -802,11 +854,10 @@
     &--contacts {
       display: inline-block;
       width: 257px;
-      margin-right: 90px;
-
+      margin-right: 110px;
 
       &:last-child {
-        margin-right: -140px;
+        margin-right: 60px;
       }
     }
   }
@@ -844,7 +895,11 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
   }
 }
 

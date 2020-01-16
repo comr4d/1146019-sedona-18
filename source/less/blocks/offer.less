@@ -186,6 +186,12 @@
   margin-top: 16px;
   margin-bottom: 0;
 
+  &--first-line {
+    width: 165px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
   @media (min-width: @tablet-width) {
     text-align: center;
     width: 165px;
@@ -195,21 +201,29 @@
     &--food {
       width: 155px;
     }
+
+    &--first-line {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    width: 280px;
-
     &--housing {
-      width: 300px;
+      width: 285px;
     }
 
     &--food {
-      width: 320px;
+      width: 300px;
     }
 
     &--souvenirs {
       width: 220px;
+    }
+
+    &--first-line {
+      margin-top: 0;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 }
