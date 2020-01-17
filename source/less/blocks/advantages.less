@@ -165,6 +165,7 @@
       font-weight: bold;
       line-height: 1.24;
       padding-top: 42px;
+      width: 151px;
     }
 
     &--grey-back {
@@ -175,14 +176,28 @@
     &--border {
       border-top: none;
     }
+
+    &--first-line {
+      display: block;
+      padding-top: 0;
+      margin: 0 auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
     line-height: 1.24;
     width: 150px;
 
+
     &--blue-back {
       padding-top: 18px;
+      width: 151px;
+    }
+
+    &--first-line {
+      display: block;
+      padding-top: 0;
+      margin: 0 auto;
     }
   }
 }
