@@ -9,7 +9,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: @desktop-width) {
@@ -18,16 +18,21 @@
 }
 
 .gallery-item {
-  margin-bottom: 0;
   padding: 21px;
   padding-top: 22px;
   padding-bottom: 14px;
   position: relative;
   border-bottom: solid 1px @grey;
   box-sizing: border-box;
+  margin-bottom: 2px;
 
   &:nth-child(1) {
     border-top: solid 1px @grey;
+    margin-bottom: 1px;
+  }
+
+  &:nth-child(3) {
+    margin-bottom: 1px;
   }
 
   @media (min-width: @tablet-width) {
@@ -124,18 +129,18 @@
 .gallery-item__text {
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.71;
+  line-height: 24px;
   text-align: left;
   color: @black;
   text-transform: none;
   position: relative;
-  margin-top: 17px;
+  margin-top: 14px;
 
   @media (min-width: @tablet-width) {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    padding: 15px 0 28px 19px;
+    padding: 13px 0 28px 19px;
     margin: 0 auto;
     position: relative;
   }
@@ -144,7 +149,7 @@
     height: 80px;
     position: absolute;
     bottom: 0;
-    padding: 17px 0 27px 20px;
+    padding: 14px 0 27px 20px;
     box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
     color: @white;
     background-color: @black-30;
@@ -156,7 +161,7 @@
   min-width: 179px;
   font-size: 14px;
   font-weight: bold;
-  line-height: 1.71;
+  line-height: 24px;
   color: @black-two;
   text-align: left;
   text-transform: uppercase;
@@ -179,7 +184,7 @@
   height: 11px;
   font-size: 14px;
   font-weight: bold;
-  line-height: 1.71;
+  line-height: 24px;
   color: @black-two;
   text-align: left;
   margin-left: 37px;
@@ -190,15 +195,15 @@
     position: absolute;
     min-width: 15px;
     right: 22px;
-    bottom: 49px;
+    bottom: 51px;
     display: inline-block;
     margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     color: @white;
-    right: 24px;
-    bottom: 38px;
+    right: 23px;
+    bottom: 40px;
 
     &::before {
       fill: @white;
@@ -214,8 +219,8 @@
   left: -37px;
 
   @media (min-width: @tablet-width) {
-    top: -2px;
-    left: -33px;
+    top: 0;
+    left: -32px;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,11 +1,11 @@
 .advantages {
   width: 320px;
   margin: 0 auto;
-  margin-top: 18px;
+  margin-top: 19px;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
-    margin-top: 50px;
+    margin-top: 51px;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,7 +19,7 @@
 
 .advantages__list {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 21px;
   color: @white;
   list-style: none;
   padding: 0;
@@ -115,7 +115,7 @@
 .advantages__title {
   font-size: 18px;
   font-weight: bold;
-  line-height: 1.44;
+  line-height: 26px;
   color: inherit;
   margin: 0;
   padding-top: 18px;
@@ -125,11 +125,11 @@
   }
 
   &--grey-back {
-    padding-top: 28px;
+    padding-top: 26px;
   }
 
   &--border {
-    padding-top: 30px;
+    padding-top: 28px;
 
     &::before {
       content: "";
@@ -159,12 +159,16 @@
     font-size: 21px;
     margin: 0 auto;
     font-weight: bold;
-    line-height: 1.24;
+    line-height: 26px;
+
+    &--city {
+      padding-top: 44px;
+    }
 
     &--blue-back {
       font-weight: bold;
-      line-height: 1.24;
-      padding-top: 42px;
+      line-height: 26px;
+      padding-top: 41px;
       width: 151px;
     }
 
@@ -185,13 +189,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    line-height: 1.24;
+    line-height: 26px;
     width: 150px;
 
 
     &--blue-back {
-      padding-top: 18px;
+      padding-top: 16px;
       width: 151px;
+    }
+
+    &--grey-back {
+      padding-top: 44px;
     }
 
     &--first-line {
@@ -206,7 +214,7 @@
   margin: 0;
 
   &--blue-back {
-    padding-bottom: 19px;
+    padding-bottom: 20px;
   }
 
   &--grey-back {
@@ -215,7 +223,11 @@
     padding-bottom: 24px;
 
     &:last-child {
-      padding-bottom: 27px;
+      padding-bottom: 28px;
+    }
+
+    &--bridge {
+      padding-bottom: 18px;
     }
   }
 
@@ -228,12 +240,12 @@
       width: 162px;
       margin: 0 auto;
       padding-top: 5px;
-      line-height: 1.5;
+      line-height: 21px;
     }
 
     &--grey-back {
       width: 160px;
-      line-height: 1.5;
+      line-height: 21px;
     }
 
     &--border {
@@ -247,7 +259,7 @@
 
     &--blue-back {
       padding-top: 0;
-      line-height: 1.5;
+      line-height: 21px;
     }
 
     &--bridge {
@@ -317,5 +329,9 @@
     width: 800px;
     position: absolute;
     top: -76px;
+
+    &--city {
+      top: -71px;
+    }
   }
 }

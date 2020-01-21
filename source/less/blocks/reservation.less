@@ -1,18 +1,20 @@
 .reservation {
   width: 320px;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 24px;
   color: @black;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 27px;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
     margin-top: 55px;
+    margin-bottom: -2px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    margin-bottom: -1px;
   }
 }
 
@@ -23,15 +25,15 @@
 .reservation__title {
   font-size: 21px;
   font-weight: bold;
-  line-height: 1.24;
+  line-height: 26px;
   color: @black-three;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
-    line-height: 0.87;
-    margin-bottom: 33px;
+    line-height: 26px;
+    margin-bottom: 31px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,10 +44,10 @@
 .reservation__description {
   margin: 0 auto;
   width: 270px;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
-    line-height: 1.71;
+    line-height: 24px;
     width: 454px;
     margin-bottom: 42px;
 
@@ -57,7 +59,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 48px;
+    margin-bottom: 47px;
 
     &--first-line {
       display: block;
@@ -71,7 +73,7 @@
   width: 280px;
   height: 58px;
   font-size: 21px;
-  line-height: 1.24;
+  line-height: 26px;
   padding: 15px;
   margin-bottom: 49px;
 
@@ -97,7 +99,7 @@
     background-image: url("../img/bg-map-tablet@1x.jpg");
     background-size: 768px 350px;
     width: 100%;
-    margin-top: 56px;
+    margin-top: 58px;
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-tablet@2x.jpg");
